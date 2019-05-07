@@ -8,7 +8,7 @@
     bind:cancel="onCancel"
   />
 </demo-block>
-
+<!-- 
 <demo-block title="选中省市县">
   <van-area
     value="{{ value }}"
@@ -28,7 +28,7 @@
     bind:change="onChange"
     bind:confirm="onConfirm"
   />
-</demo-block>
+</demo-block> -->
 
 
 <van-toast id="van-toast" />

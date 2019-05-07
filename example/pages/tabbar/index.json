@@ -1,3 +1,12 @@
 {
-  "navigationBarTitleText": "Tabbar 标签栏"
+  "navigationBarTitleText": "Tabbar 标签栏",
+  "usingComponents":{
+    "demo-block": "../../components/demo-block/index",
+    "van-button": "../../dist/button/index",
+    "van-icon": "../../dist/icon/index",
+    "van-badge": "../../dist/badge/index",
+    "van-badge-group": "../../dist/badge-group/index",
+    "van-tabbar": "../../dist/tabbar/index",
+    "van-tabbar-item": "../../dist/tabbar-item/index"
+  }
 }

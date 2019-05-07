@@ -36,7 +36,13 @@ VantComponent({
   beforeCreate() {
     this.children = [];
   },
+  mounted() {
+    this.children = this.selectAllComponents('.column');
 
+    if (Array.isArray(this.children) && this.children.length) {
+          this.setColumns().catch(() => {});
+    }
+  },
   methods: {
     noop() {},
 

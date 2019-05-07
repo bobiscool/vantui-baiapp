@@ -33,12 +33,12 @@
   >
     <picker-column
       class="van-picker__column"
-      s-for="{{ isSimple(columns) ? [columns] : columns }}"
+      s-for="{{ columns }}"
       s-key="{{ index }}"
       data-index="{{ index }}"
       custom-class="column-class"
       value-key="{{ valueKey }}"
-      initial-options="{{ isSimple(columns) ? item : item.values }}"
+      initial-options="{{ item.values }}"
       default-index="{{ item.defaultIndex || defaultIndex }}"
       item-height="{{ itemHeight }}"
       visible-item-count="{{ visibleItemCount }}"
@@ -56,5 +56,7 @@
   function isSimple(columns) {
     return columns.length && !columns[0].values;
   }
-  module.exports = isSimple;
+  export default {
+    isSimple
+  };
 </filter>

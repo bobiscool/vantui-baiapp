@@ -41,6 +41,9 @@ VantComponent({
 
   created() {
     this.currentActive = this.data.active;
+    // this.setSlotChild().then(children => {
+    //   this.children = children;
+    // });
   },
 
   methods: {

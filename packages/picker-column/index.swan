@@ -14,7 +14,7 @@
       style="height: {{ itemHeight }}px"
       class="van-ellipsis van-picker-column__item {{ item && item.disabled ? 'van-picker-column__item--disabled' : '' }} {{ index === currentIndex ? 'van-picker-column__item--selected active-class' : '' }}"
       bindtap="onClickItem"
-    >{{ getOptionText.getText(option, valueKey) }}</view>
+    >{{ getOptionText.getText(item, valueKey) }}</view>
   </view>
 </view>
 

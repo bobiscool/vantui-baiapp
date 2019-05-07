@@ -5,7 +5,7 @@ Page({
   data: {
     areaList: {},
     loading: true,
-    value: 330302
+    value: '330302'
   },
 
   onShow() {
@@ -22,7 +22,6 @@ Page({
 
   onChange(event) {
     const { values } = event.detail;
-
     Toast(values.map(item => item.name).join('-'));
   },
 

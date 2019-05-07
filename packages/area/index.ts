@@ -137,7 +137,7 @@ VantComponent({
       const city = this.getList('city', code.slice(0, 2));
 
       const picker = this.getPicker();
-
+      console.log(picker);
       if (!picker) {
         return;
       }
