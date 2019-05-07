@@ -197,7 +197,7 @@ Page({
 | bind:close | 弹窗关闭时触发 | event.detail: 触发关闭事件的来源，<br>枚举为`confirm`,`cancel`,`overlay` |
 | bind:confirm | 点击确认按钮时触发 | - |
 | bind:cancel | 点击取消按钮时触发 | - |
-| bind:getuserinfo | 点击确认按钮时，会返回获取到的用户信息，<br>从返回参数的 detail 中获取到的值同 wx.getUserInfo | - |
+| bind:getuserinfo | 点击确认按钮时，会返回获取到的用户信息，<br>从返回参数的 detail 中获取到的值同 swan.getUserInfo | - |
 | bind:contact | 客服消息回调 | - |
 | bind:getphonenumber | 获取用户手机号回调 | - |
 | bind:error | 当使用开放能力时，发生错误的回调 | - |

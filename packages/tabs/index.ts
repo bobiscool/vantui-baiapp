@@ -108,7 +108,7 @@ VantComponent({
     this.scrollIntoView();
 
     this.getRect('.van-tabs__wrap').then(
-      (rect: wx.BoundingClientRectCallbackResult) => {
+      (rect: swan.BoundingClientRectCallbackResult) => {
         this.navHeight = rect.height;
         this.observerContentScroll();
       }
@@ -162,7 +162,7 @@ VantComponent({
       const { color, active, duration, lineWidth, lineHeight } = this.data;
 
       this.getRect('.van-tab', true).then(
-        (rects: wx.BoundingClientRectCallbackResult[]) => {
+        (rects: swan.BoundingClientRectCallbackResult[]) => {
           const rect = rects[active];
           const width = lineWidth !== -1 ? lineWidth : rect.width / 2;
           const height = lineHeight !== -1 ? `height: ${lineHeight}px;` : '';
@@ -197,7 +197,7 @@ VantComponent({
       if (!animated) return '';
 
       this.getRect('.van-tabs__content').then(
-        (rect: wx.BoundingClientRectCallbackResult) => {
+        (rect: swan.BoundingClientRectCallbackResult) => {
           const { width } = rect;
 
           this.set({
@@ -254,8 +254,8 @@ VantComponent({
         this.getRect('.van-tabs__nav')
       ]).then(
         ([tabRects, navRect]: [
-        wx.BoundingClientRectCallbackResult[],
-        wx.BoundingClientRectCallbackResult
+        swan.BoundingClientRectCallbackResult[],
+        swan.BoundingClientRectCallbackResult
         ]) => {
           const tabRect = tabRects[active];
           const offsetLeft = tabRects
@@ -335,13 +335,13 @@ VantComponent({
       }
 
       const { offsetTop } = this.data;
-      const { windowHeight } = wx.getSystemInfoSync();
+      const { windowHeight } = swan.getSystemInfoSync();
 
       this.createIntersectionObserver().disconnect();
 
       this.createIntersectionObserver()
         .relativeToViewport({ top: -(this.navHeight + offsetTop) })
-        .observe('.van-tabs', (res: wx.ObserveCallbackResult) => {
+        .observe('.van-tabs', (res: swan.ObserveCallbackResult) => {
           const { top } = res.boundingClientRect;
 
           if (top > offsetTop) {
@@ -361,7 +361,7 @@ VantComponent({
 
       this.createIntersectionObserver()
         .relativeToViewport({ bottom: -(windowHeight - 1 - offsetTop) })
-        .observe('.van-tabs', (res: wx.ObserveCallbackResult) => {
+        .observe('.van-tabs', (res: swan.ObserveCallbackResult) => {
           const { top, bottom } = res.boundingClientRect;
 
           if (bottom < this.navHeight) {

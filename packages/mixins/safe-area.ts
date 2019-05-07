@@ -5,7 +5,7 @@ function getSafeArea() {
     if (cache != null) {
       resolve(cache);
     } else {
-      wx.getSystemInfo({
+      swan.getSystemInfo({
         success: ({ model, screenHeight, statusBarHeight }) => {
           const iphoneX = /iphone x/i.test(model);
           const iphoneNew = /iPhone11/i.test(model) && screenHeight === 812;

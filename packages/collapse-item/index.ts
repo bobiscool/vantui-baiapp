@@ -75,7 +75,7 @@ VantComponent({
 
     updateStyle(expanded: boolean) {
       return this.getRect('.van-collapse-item__content')
-        .then((rect: wx.BoundingClientRectCallbackResult) => rect.height)
+        .then((rect: swan.BoundingClientRectCallbackResult) => rect.height)
         .then((height: number) => {
           if (expanded) {
             return this.set({

@@ -65,7 +65,7 @@ VantComponent({
       });
     }
 
-    this.resetAnimation = wx.createAnimation({
+    this.resetAnimation = swan.createAnimation({
       duration: 0,
       timingFunction: 'linear'
     });
@@ -80,7 +80,7 @@ VantComponent({
       Promise.all([
         this.getRect('.van-notice-bar__content'),
         this.getRect('.van-notice-bar__content-wrap')
-      ]).then((rects: wx.BoundingClientRectCallbackResult[]) => {
+      ]).then((rects: swan.BoundingClientRectCallbackResult[]) => {
         const [contentRect, wrapRect] = rects;
         if (
           contentRect == null ||
@@ -99,7 +99,7 @@ VantComponent({
           this.wrapWidth = wrapRect.width;
           this.contentWidth = contentRect.width;
           this.duration = duration;
-          this.animation = wx.createAnimation({
+          this.animation = swan.createAnimation({
             duration,
             timingFunction: 'linear',
             delay

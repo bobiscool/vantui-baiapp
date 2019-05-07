@@ -53,7 +53,7 @@ VantComponent({
       if (this.data.disabled) return;
 
       this.touchMove(event);
-      this.getRect('.van-slider').then((rect: wx.BoundingClientRectCallbackResult) => {
+      this.getRect('.van-slider').then((rect: swan.BoundingClientRectCallbackResult) => {
         const diff = this.deltaX / rect.width * 100;
         this.newValue = this.startValue + diff;
         this.updateValue(this.newValue, false, true);
@@ -68,7 +68,7 @@ VantComponent({
     onClick(event: Weapp.TouchEvent) {
       if (this.data.disabled) return;
 
-      this.getRect('.van-slider').then((rect: wx.BoundingClientRectCallbackResult) => {
+      this.getRect('.van-slider').then((rect: swan.BoundingClientRectCallbackResult) => {
         const value = (event.detail.x - rect.left) / rect.width * 100;
         this.updateValue(value, true);
       });

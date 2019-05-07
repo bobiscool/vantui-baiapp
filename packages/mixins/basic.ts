@@ -6,7 +6,7 @@ export const basic = Behavior({
 
     getRect(selector: string, all: boolean) {
       return new Promise(resolve => {
-        wx.createSelectorQuery()
+        swan.createSelectorQuery()
           .in(this)[all ? 'selectAll' : 'select'](selector)
           .boundingClientRect(rect => {
             if (all && Array.isArray(rect) && rect.length) {
