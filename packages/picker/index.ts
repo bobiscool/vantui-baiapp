@@ -73,13 +73,13 @@ VantComponent({
     onChange(event: Weapp.Event) {
       if (this.simple) {
         this.$emit('change', {
-          picker: this,
+          pickerId: this.nodeId,
           value: this.getColumnValue(0),
           index: this.getColumnIndex(0)
         });
       } else {
         this.$emit('change', {
-          picker: this,
+          pickerId: this.nodeId,
           value: this.getValues(),
           index: event.currentTarget.dataset.index
         });

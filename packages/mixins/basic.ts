@@ -40,6 +40,9 @@ export const basic = Behavior({
   },
   getSlotParent() {
       return this.pageinstance.privateProperties.customComponents[this.ownerId];
+  },
+  getComponentByid(id) {
+    return this.pageinstance.privateProperties.customComponents[this.ownerId];
   }
   }
 });
