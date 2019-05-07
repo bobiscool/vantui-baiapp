@@ -42,7 +42,7 @@ export const basic = Behavior({
       return this.pageinstance.privateProperties.customComponents[this.ownerId];
   },
   getComponentByid(id) {
-    return this.pageinstance.privateProperties.customComponents[this.ownerId];
+    return this.pageinstance.privateProperties.customComponents[id];
   }
   }
 });

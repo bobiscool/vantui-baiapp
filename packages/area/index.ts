@@ -75,7 +75,7 @@ VantComponent({
       this.code = value[index].code;
       this.setValues().then(() => {
         this.$emit('change', {
-          picker,
+          pickerId,
           values: this.getComponentByid(pickerId).getValues(),
           index
         });
