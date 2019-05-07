@@ -111,7 +111,7 @@ function isSrc(url) {
 const memBem = memoize(bem);
 
 export default {
-  memBem: function(a, b) {
+  bem: function(a, b) {
     return memBem(a, b);
   },
   isSrc: isSrc

@@ -17,11 +17,11 @@
       bind:touchcancel="onTouchEnd"
     >
       <slot
-        wx:if="{{ useButtonSlot }}"
+        s-if="{{ useButtonSlot }}"
         name="button"
       />
       <view
-        wx:else
+        s-else
         class="van-slider__button"
       />
     </view>

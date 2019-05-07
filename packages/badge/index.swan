@@ -8,7 +8,7 @@
 >
   <view class="van-badge__text">
     <van-info
-      wx:if="{{ info !== null }}"
+      s-if="{{ info !== null }}"
       info="{{ info }}"
       custom-style="right: 4px"
     />

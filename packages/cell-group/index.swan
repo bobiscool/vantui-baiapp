@@ -1,5 +1,5 @@
 <view
-  wx:if="{{ title }}"
+  s-if="{{ title }}"
   class="van-cell-group__title"
 >
   {{ title }}

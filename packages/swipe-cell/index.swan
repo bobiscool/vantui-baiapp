@@ -9,11 +9,11 @@
   catchtouchcancel="endDrag"
 >
   <view style="{{ wrapperStyle }}">
-    <view wx:if="{{ leftWidth }}" class="van-swipe-cell__left" data-key="left" catch:tap="onClick">
+    <view s-if="{{ leftWidth }}" class="van-swipe-cell__left" data-key="left" catch:tap="onClick">
       <slot name="left" />
     </view>
     <slot />
-    <view wx:if="{{ rightWidth }}" class="van-swipe-cell__right" data-key="right" catch:tap="onClick">
+    <view s-if="{{ rightWidth }}" class="van-swipe-cell__right" data-key="right" catch:tap="onClick">
       <slot name="right" />
     </view>
   </view>

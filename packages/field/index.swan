@@ -16,7 +16,7 @@
   <slot name="label" slot="title" />
   <view class="van-field__body {{ type === 'textarea' ? 'van-field__body--textarea' : '' }}">
     <textarea
-      wx:if="{{ type === 'textarea' }}"
+      s-if="{{ type === 'textarea' }}"
       class="input-class {{ utils.bem('field__input', [inputAlign, { disabled, error }]) }}"
       fixed="{{ fixed }}"
       focus="{{ focus }}"
@@ -32,12 +32,12 @@
       bind:focus="onFocus"
       bind:confirm="onConfirm"
     >
-      <view wx:if="{{ value == null || value.length === 0 }}" style="{{ placeholderStyle }}" class="{{ utils.bem('field__placeholder', { error }) }}">
+      <view s-if="{{ value == null || value.length === 0 }}" style="{{ placeholderStyle }}" class="{{ utils.bem('field__placeholder', { error }) }}">
         {{ placeholder }}
       </view>
     </textarea>
     <input
-      wx:else
+      s-else
       class="input-class {{ utils.bem('field__input', [inputAlign, { disabled, error }]) }}"
       type="{{ type }}"
       focus="{{ focus }}"
@@ -58,7 +58,7 @@
       bind:confirm="onConfirm"
     />
     <van-icon
-      wx:if="{{ showClear }}"
+      s-if="{{ showClear }}"
       size="16px"
       name="clear"
       class="van-field__clear-root van-field__icon-root"
@@ -66,7 +66,7 @@
     />
     <view class="van-field__icon-container" bind:tap="onClickIcon">
       <van-icon
-        wx:if="{{ rightIcon || icon }}"
+        s-if="{{ rightIcon || icon }}"
         size="16px"
         name="{{ rightIcon || icon }}"
         class="van-field__icon-root {{ iconClass }}"
@@ -79,7 +79,7 @@
       <slot name="button" />
     </view>
   </view>
-  <view wx:if="{{ errorMessage }}" class="van-field__error-message {{ utils.bem('field__error', [errorMessageAlign, { disabled, error }]) }}">
+  <view s-if="{{ errorMessage }}" class="van-field__error-message {{ utils.bem('field__error', [errorMessageAlign, { disabled, error }]) }}">
     {{ errorMessage }}
   </view>
 </van-cell>

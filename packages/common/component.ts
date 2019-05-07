@@ -51,7 +51,7 @@ function VantComponent<Data, Props, Watch, Methods, Computed>(
 
   // map field to form-field behavior
   if (vantOptions.field) {
-    options.behaviors.push('wx://form-field');
+    options.behaviors.push('s-//form-field');
   }
 
   // add default options

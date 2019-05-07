@@ -7,19 +7,19 @@
 >
   <view class="{{ utils.bem('tabbar-item__icon', { dot }) }}">
     <van-icon
-      wx:if="{{ icon }}"
+      s-if="{{ icon }}"
       name="{{ icon }}"
       customStyle="display: block"
     />
-    <block wx:else>
+    <block s-else>
       <slot
-        wx:if="{{ active }}"
+        s-if="{{ active }}"
         name="icon-active"
       />
-      <slot wx:else name="icon" />
+      <slot s-else name="icon" />
     </block>
     <van-info
-      wx:if="{{ info !== null }}"
+      s-if="{{ info !== null }}"
       info="{{ info }}"
       custom-style="margin-top: 2px"
     />

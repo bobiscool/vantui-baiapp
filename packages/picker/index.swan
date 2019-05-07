@@ -1,6 +1,6 @@
 <view class="van-picker custom-class">
   <view
-    wx:if="{{ showToolbar }}"
+    s-if="{{ showToolbar }}"
     class="van-picker__toolbar van-hairline--top-bottom toolbar-class"
   >
     <view
@@ -12,7 +12,7 @@
     >
       {{ cancelButtonText }}
     </view>
-    <view wx:if="{{ title }}" class="van-picker__title van-ellipsis">{{ title }}</view>
+    <view s-if="{{ title }}" class="van-picker__title van-ellipsis">{{ title }}</view>
     <view
       class="van-picker__confirm"
       hover-class="van-picker__confirm--hover"
@@ -23,7 +23,7 @@
       {{ confirmButtonText }}
     </view>
   </view>
-  <view wx:if="{{ loading }}" class="van-picker__loading">
+  <view s-if="{{ loading }}" class="van-picker__loading">
     <loading color="#1989fa"/>
   </view>
   <view
@@ -33,8 +33,8 @@
   >
     <picker-column
       class="van-picker__column"
-      wx:for="{{ isSimple(columns) ? [columns] : columns }}"
-      wx:key="{{ index }}"
+      s-for="{{ isSimple(columns) ? [columns] : columns }}"
+      s-key="{{ index }}"
       data-index="{{ index }}"
       custom-class="column-class"
       value-key="{{ valueKey }}"

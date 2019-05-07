@@ -1,11 +1,11 @@
 <view
-  wx:if="{{ show }}"
+  s-if="{{ show }}"
   class="custom-class van-notice-bar {{ hasRightIcon ? 'van-notice-bar--within-icon' : '' }}"
   style="color: {{ color }}; background-color: {{ backgroundColor }};"
   bind:tap="onClick"
 >
   <image
-    wx:if="{{ leftIcon }}"
+    s-if="{{ leftIcon }}"
     src="{{ leftIcon }}"
     class="van-notice-bar__left-icon"
   />
@@ -16,13 +16,13 @@
   </view>
 
   <van-icon
-    wx:if="{{ mode === 'closeable' }}"
+    s-if="{{ mode === 'closeable' }}"
     class="van-notice-bar__right-icon"
     name="cross"
     bind:tap="onClickIcon"
   />
   <navigator
-    wx:if="{{ mode === 'link' }}"
+    s-if="{{ mode === 'link' }}"
     url="{{ url }}"
     open-type="{{ openType }}"
   >

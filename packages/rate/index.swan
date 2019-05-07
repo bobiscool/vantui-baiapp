@@ -3,8 +3,8 @@
   bind:touchmove="onTouchMove"
 >
   <van-icon
-    wx:for="{{ list }}"
-    wx:key="index"
+    s-for="{{ list }}"
+    s-key="index"
     class="van-rate__item"
     custom-class="icon-class"
     size="{{ size }}px"

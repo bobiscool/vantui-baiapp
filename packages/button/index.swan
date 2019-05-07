@@ -22,18 +22,18 @@
   bindlaunchapp="bindLaunchApp"
   bindopensetting="bindOpenSetting"
 >
-  <block wx:if="{{ loading }}">
+  <block s-if="{{ loading }}">
     <van-loading
       custom-class="loading-class"
       size="{{ loadingSize }}"
       color="{{ type === 'default' ? '#c9c9c9' : '' }}"
     />
     <view
-      wx:if="{{ loadingText }}"
+      s-if="{{ loadingText }}"
       class="van-button__loading-text"
     >
       {{ loadingText }}
     </view>
   </block>
-  <slot wx:else />
+  <slot s-else />
 </button>

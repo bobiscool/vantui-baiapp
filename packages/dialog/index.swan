@@ -8,15 +8,15 @@
   bind:close="onClickOverlay"
 >
   <view
-    wx:if="{{ title }}"
+    s-if="{{ title }}"
     class="van-dialog__header {{ message || useSlot ? '' : 'van-dialog--isolated' }}"
   >
     {{ title }}
   </view>
 
-  <slot wx:if="{{ useSlot }}" />
+  <slot s-if="{{ useSlot }}" />
   <view
-    wx:elif="{{ message }}"
+    s-elif="{{ message }}"
     class="van-dialog__message {{ title ? 'van-dialog__message--has-title' : '' }} {{ messageAlign ? 'van-dialog__message--' + messageAlign : '' }}"
   >
     <text>{{ message }}</text>
@@ -24,7 +24,7 @@
 
   <view class="van-hairline--top van-dialog__footer">
     <van-button
-      wx:if="{{ showCancelButton }}"
+      s-if="{{ showCancelButton }}"
       size="large"
       loading="{{ loading.cancel }}"
       class="van-dialog__button van-hairline--right"
@@ -34,7 +34,7 @@
       {{ cancelButtonText }}
     </van-button>
     <van-button
-      wx:if="{{ showConfirmButton }}"
+      s-if="{{ showConfirmButton }}"
       size="large"
       class="van-dialog__button"
       loading="{{ loading.confirm }}"

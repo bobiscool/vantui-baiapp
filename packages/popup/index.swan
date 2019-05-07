@@ -1,7 +1,7 @@
 <filter src="../_filter/utils.filter.js" module="utils" />
 
 <van-overlay
-  wx:if="{{ inited && overlay }}"
+  s-if="{{ inited && overlay }}"
   mask
   show="{{ show }}"
   z-index="{{ zIndex }}"
@@ -10,11 +10,11 @@
   bind:click="onClickOverlay"
 />
 <view
-  wx:if="{{ inited }}"
+  s-if="{{ inited }}"
   class="custom-class {{ classes }} {{ utils.bem('popup', [position, { safe: isIPhoneX && safeAreaInsetBottom }]) }}"
   style="z-index: {{ zIndex }}; -webkit-transition-duration:{{ currentDuration }}ms; transition-duration:{{ currentDuration }}ms; {{ display ? '' : 'display: none;' }} {{ customStyle }}"
   bind:transitionend="onTransitionEnd"
 >
-  <view wx:if="{{ safeAreaInsetTop }}" class="van-popup__safe-top" style="padding-top: {{ statusBarHeight }}px;"></view>
+  <view s-if="{{ safeAreaInsetTop }}" class="van-popup__safe-top" style="padding-top: {{ statusBarHeight }}px;"></view>
   <slot />
 </view>
