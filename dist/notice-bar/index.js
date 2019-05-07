@@ -59,7 +59,7 @@ VantComponent({
                 hasRightIcon: true
             });
         }
-        this.resetAnimation = wx.createAnimation({
+        this.resetAnimation = swan.createAnimation({
             duration: 0,
             timingFunction: 'linear'
         });
@@ -86,7 +86,7 @@ VantComponent({
                     this.wrapWidth = wrapRect.width;
                     this.contentWidth = contentRect.width;
                     this.duration = duration;
-                    this.animation = wx.createAnimation({
+                    this.animation = swan.createAnimation({
                         duration,
                         timingFunction: 'linear',
                         delay

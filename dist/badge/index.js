@@ -13,7 +13,7 @@ VantComponent({
     },
     methods: {
         onClick() {
-            const { parent } = this;
+            const parent = this.getSlotParent();
             if (!parent) {
                 return;
             }

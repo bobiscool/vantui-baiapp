@@ -1,0 +1,37 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view
+  class="{{ utils.bem('nav-bar', { fixed }) }} custom-class {{ border ? 'van-hairline--bottom' : '' }}"
+  style="z-index: {{ zIndex }}; {{ safeAreaInsetTop ? 'padding-top: ' + statusBarHeight + 'px;' : '' }}"
+>
+  <view class="van-nav-bar__left" bind:tap="onClickLeft">
+    <block s-if="{{ leftArrow || leftText }}">
+      <van-icon
+        s-if="{{ leftArrow }}"
+        size="16px"
+        name="arrow-left"
+        custom-class="van-nav-bar__arrow"
+      />
+      <view
+        s-if="{{ leftText }}"
+        class="van-nav-bar__text"
+        hover-class="van-nav-bar__text--hover"
+        hover-stay-time="70"
+      >{{ leftText }}</view>
+    </block>
+    <slot s-else name="left" />
+  </view>
+  <view class="van-nav-bar__title title-class van-ellipsis">
+    <block s-if="{{ title }}">{{ title }}</block>
+    <slot s-else name="title" />
+  </view>
+  <view class="van-nav-bar__right" bind:tap="onClickRight">
+    <view
+      s-if="{{ rightText }}"
+      class="van-nav-bar__text"
+      hover-class="van-nav-bar__text--hover"
+      hover-stay-time="70"
+    >{{ rightText }}</view>
+    <slot s-else name="right" />
+  </view>
+</view>

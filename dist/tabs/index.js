@@ -270,7 +270,7 @@ VantComponent({
                 return;
             }
             const { offsetTop } = this.data;
-            const { windowHeight } = wx.getSystemInfoSync();
+            const { windowHeight } = swan.getSystemInfoSync();
             this.createIntersectionObserver().disconnect();
             this.createIntersectionObserver()
                 .relativeToViewport({ top: -(this.navHeight + offsetTop) })

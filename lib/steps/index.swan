@@ -1,0 +1,35 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view class="custom-class {{ utils.bem('steps', [direction]) }}">
+  <view class="van-step__wrapper">
+    <view
+      s-for="{{ steps }}"
+      s-key="index"
+      class="{{ utils.bem('step', [direction, status(index, active)]) }} van-hairline"
+    >
+      <view class="van-step__title" style="{{ index === active ? 'color: ' + activeColor : '' }}">
+        <view>{{ item.text }}</view>
+        <view>{{ item.desc }}</view>
+      </view>
+      <view class="van-step__circle-container">
+        <view class="van-step__circle" s-if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+        <van-icon s-else name="checked" color="{{ activeColor }}" custom-class="van-step__active" />
+      </view>
+      <view s-if="{{ index !== steps.length - 1 }}" class="van-step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+    </view>
+  </view>
+</view>
+
+<filter module="status">
+function get(index, active) {
+  if (index < active) {
+    return 'finish';
+  } else if (index === active) {
+    return 'process';
+  }
+
+  return '';
+}
+
+module.exports = get;
+</filter>

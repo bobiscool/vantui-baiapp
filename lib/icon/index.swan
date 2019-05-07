@@ -1,0 +1,18 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view
+  class="custom-class {{ classPrefix }} {{ utils.isSrc(name) ? 'van-icon--image' : classPrefix + '-' + name }}"
+  style="{{ color ? 'color: ' + color + ';' : '' }}{{ size ? 'font-size: ' + size + ';' : '' }}{{ customStyle }}"
+  bind:tap="onClick"
+>
+  <van-info
+    s-if="{{ info !== null }}"
+    info="{{ info }}"
+    custom-class="van-icon__info"
+  />
+  <image
+    s-if="{{ utils.isSrc(name) }}"
+    src="{{ name }}"
+    class="van-icon__image"
+  />
+</view>

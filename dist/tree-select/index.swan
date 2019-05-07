@@ -1,0 +1,39 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view
+  class="van-tree-select"
+  style="height: {{ mainHeight }}px"
+>
+  <scroll-view scroll-y class="van-tree-select__nav">
+    <view
+      s-for="{{ items }}"
+      s-key="index"
+      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ mainActiveIndex === index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
+      data-index="{{ index }}"
+      bind:tap="onClickNav"
+    >
+      {{ item.text }}
+    </view>
+  </scroll-view>
+  <scroll-view
+    scroll-y
+    class="van-tree-select__content"
+    style="height: {{ itemHeight }}px"
+  >
+    <view
+      s-for="{{ subItems }}"
+      s-key="id"
+      class="van-ellipsis van-hairline--bottom content-item-class {{ utils.bem('tree-select__item', { active: activeId === item.id, disabled: item.disabled }) }} {{ activeId === item.id ? 'content-active-class' : '' }} {{ item.disabled ? 'content-disabled-class' : '' }}"
+      data-item="{{ item }}"
+      bind:tap="onSelectItem"
+    >
+      {{ item.text }}
+      <van-icon
+        s-if="{{ activeId === item.id }}"
+        name="checked"
+        size="16px"
+        class="van-tree-select__selected"
+      />
+    </view>
+  </scroll-view>
+</view>

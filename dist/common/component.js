@@ -33,9 +33,10 @@ function VantComponent(vantOptions = {}) {
     // add default behaviors
     options.behaviors = options.behaviors || [];
     options.behaviors.push(basic);
+    console.log('----编译组件---');
     // map field to form-field behavior
     if (vantOptions.field) {
-        options.behaviors.push('wx://form-field');
+        options.behaviors.push('s-//form-field');
     }
     // add default options
     options.options = {

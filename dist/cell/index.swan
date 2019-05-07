@@ -1,0 +1,45 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view
+  class="custom-class {{ utils.bem('cell', [size, { center, required, borderless: !border, clickable: isLink || clickable }]) }}"
+  hover-class="van-cell--hover hover-class"
+  hover-stay-time="70"
+  style="{{ customStyle }}"
+  bind:tap="onClick"
+>
+  <van-icon
+    s-if="{{ icon }}"
+    name="{{ icon }}"
+    class="van-cell__left-icon-wrap"
+    custom-class="van-cell__left-icon"
+  />
+  <slot s-else name="icon" />
+
+  <view
+    style="{{ titleWidth ? 'max-width:' + titleWidth + ';min-width:' + titleWidth : '' }}"
+    class="van-cell__title title-class"
+  >
+    <block s-if="{{ title }}">{{ title }}</block>
+    <slot s-else name="title" />
+
+    <view s-if="{{ label || useLabelSlot }}" class="van-cell__label label-class">
+      <slot s-if="{{ useLabelSlot }}" name="label" />
+      <block s-elif="{{ label }}">{{ label }}</block>
+    </view>
+  </view>
+
+  <view class="van-cell__value value-class">
+    <block s-if="{{ value || value === 0 }}">{{ value }}</block>
+    <slot s-else />
+  </view>
+
+  <van-icon
+    s-if="{{ isLink }}"
+    name="{{ arrowDirection ? 'arrow' + '-' + arrowDirection : 'arrow' }}"
+    class="van-cell__right-icon-wrap right-icon-class"
+    custom-class="van-cell__right-icon"
+  />
+  <slot s-else name="right-icon" />
+
+  <slot name="extra" />
+</view>

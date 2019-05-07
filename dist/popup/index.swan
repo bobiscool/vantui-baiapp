@@ -1,0 +1,20 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<van-overlay
+  s-if="{{ inited && overlay }}"
+  mask
+  show="{{ show }}"
+  z-index="{{ zIndex }}"
+  custom-style="{{ overlayStyle }}"
+  duration="{{ duration }}"
+  bind:click="onClickOverlay"
+/>
+<view
+  s-if="{{ inited }}"
+  class="custom-class {{ classes }} {{ utils.bem('popup', [position, { safe: isIPhoneX && safeAreaInsetBottom }]) }}"
+  style="z-index: {{ zIndex }}; -webkit-transition-duration:{{ currentDuration }}ms; transition-duration:{{ currentDuration }}ms; {{ display ? '' : 'display: none;' }} {{ customStyle }}"
+  bind:transitionend="onTransitionEnd"
+>
+  <view s-if="{{ safeAreaInsetTop }}" class="van-popup__safe-top" style="padding-top: {{ statusBarHeight }}px;"></view>
+  <slot />
+</view>

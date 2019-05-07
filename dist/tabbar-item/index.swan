@@ -1,0 +1,30 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
+<view
+  class="{{ utils.bem('tabbar-item', { active }) }} custom-class"
+  style="{{ active && color ? 'color: ' + color : '' }}"
+  bind:tap="onClick"
+>
+  <view class="{{ utils.bem('tabbar-item__icon', { dot }) }}">
+    <van-icon
+      s-if="{{ icon }}"
+      name="{{ icon }}"
+      customStyle="display: block"
+    />
+    <block s-else>
+      <slot
+        s-if="{{ active }}"
+        name="icon-active"
+      />
+      <slot s-else name="icon" />
+    </block>
+    <van-info
+      s-if="{{ info !== null }}"
+      info="{{ info }}"
+      custom-style="margin-top: 2px"
+    />
+  </view>
+  <view class="van-tabbar-item__text">
+    <slot />
+  </view>
+</view>
