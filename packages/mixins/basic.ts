@@ -23,6 +23,7 @@ export const basic = Behavior({
     setSlotChild() {
       // 百度小程序 父组件 没法与 slot进去的子组件 通讯 于是做了一层这样的 hack
       let customComponents = this.pageinstance.privateProperties.customComponents;
+      console.log('customComponents', customComponents);
       let childs = [];
       let keys = Object.keys(customComponents)
       if (this.data.wid) {

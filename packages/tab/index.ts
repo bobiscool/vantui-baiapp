@@ -31,7 +31,7 @@ VantComponent({
 
   methods: {
     update() {
-      const parent = this.getRelationNodes('../tabs/index')[0];
+      const parent = this.getSlotParent();
       if (parent) {
         parent.updateTabs();
       }

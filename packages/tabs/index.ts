@@ -101,7 +101,12 @@ VantComponent({
   beforeCreate() {
     this.child = [];
   },
-
+  created() {
+    this.setSlotChild().then(children => {
+      console.log('set', children);
+      this.child = children;
+    });        
+  },
   mounted() {
     this.setLine(true);
     this.setTrack();

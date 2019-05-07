@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "Badge 徽章"
+  "navigationBarTitleText": "Badge 徽章",
+  "usingComponents": {
+    "demo-block": "../../components/demo-block/index",
+    "van-button": "../../dist/button/index",
+    "van-icon": "../../dist/icon/index",
+    "van-badge": "../../dist/badge/index",
+    "van-badge-group": "../../dist/badge-group/index"
+  }
 }
