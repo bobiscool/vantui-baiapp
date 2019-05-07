@@ -20,7 +20,7 @@
   </view>
 </view>
 
-<wxs module="status">
+<filter module="status">
 function get(index, active) {
   if (index < active) {
     return 'finish';
@@ -32,4 +32,4 @@ function get(index, active) {
 }
 
 module.exports = get;
-</wxs>
+</filter>

@@ -19,7 +19,7 @@
   </view>
 </view>
 
-<wxs module="getOptionText">
+<filter module="getOptionText">
 function isObj(x) {
   var type = typeof x;
   return x !== null && (type === 'object' || type === 'function');
@@ -28,4 +28,4 @@ function isObj(x) {
 module.exports = function (option, valueKey) {
   return isObj(option) && option[valueKey] ? option[valueKey] : option;
 }
-</wxs>
+</filter>
