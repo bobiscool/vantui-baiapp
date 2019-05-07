@@ -1,11 +1,6 @@
 import { VantComponent } from '../common/component';
 
 VantComponent({
-  relation: {
-    name: 'tabs',
-    type: 'ancestor'
-  },
-
   props: {
     dot: Boolean,
     info: null,

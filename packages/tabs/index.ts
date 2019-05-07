@@ -14,23 +14,6 @@ VantComponent({
   mixins: [touch],
 
   classes: ['nav-class', 'tab-class', 'tab-active-class', 'line-class'],
-
-  relation: {
-    name: 'tab',
-    type: 'descendant',
-    linked(child: Weapp.Component) {
-      this.child.push(child);
-      this.updateTabs(this.data.tabs.concat(child.data));
-    },
-    unlinked(child: Weapp.Component) {
-      const index = this.child.indexOf(child);
-      const { tabs } = this.data;
-      tabs.splice(index, 1);
-      this.child.splice(index, 1);
-      this.updateTabs(tabs);
-    }
-  },
-
   props: {
     color: String,
     sticky: Boolean,
@@ -103,7 +86,6 @@ VantComponent({
   },
   created() {
     this.setSlotChild().then(children => {
-      console.log('set', children);
       this.child = children;
     });        
   },
@@ -225,6 +207,7 @@ VantComponent({
     },
 
     setActiveTab() {
+      if(!this.child) return false;
       this.child.forEach((item: Weapp.Component, index: number) => {
         const data: TabItemData = {
           active: index === this.data.active
