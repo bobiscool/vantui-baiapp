@@ -28,7 +28,7 @@ const compileLess = dist => () =>
     .pipe(
       insert.transform((contents, file) => {
         if (!file.path.includes('packages' + path.sep + 'common')) {
-          contents = `@import '../common/index.wxss';` + contents;
+          contents = `@import '../common/index.css';` + contents;
         }
         return contents;
       })
@@ -68,7 +68,7 @@ if (isProduction) {
 
   gulp.watch(`${src}/**/*.ts`, compileTs(exampleDir));
   gulp.watch(`${src}/**/*.less`, compileLess(exampleDir));
-  gulp.watch(`${src}/**/*.wxml`, copy(exampleDir, 'wxml'));
+  gulp.watch(`${src}/**/*.swan`, copy(exampleDir, 'wxml'));
   gulp.watch(`${src}/**/*.wxs`, copy(exampleDir, 'wxs'));
   gulp.watch(`${src}/**/*.json`, copy(exampleDir, 'json'));
 }
