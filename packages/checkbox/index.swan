@@ -1,4 +1,4 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<filter src="../_filter/utils.filter.js" module="utils" />
 
 <view class="van-checkbox custom-class">
   <view class="van-checkbox__icon-wrap" bindtap="toggle">
