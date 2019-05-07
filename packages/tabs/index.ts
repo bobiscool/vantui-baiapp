@@ -162,7 +162,7 @@ VantComponent({
       const { color, active, duration, lineWidth, lineHeight } = this.data;
 
       this.getRect('.van-tab', true).then(
-        (rects: swan.BoundingClientRectCallbackResult[]) => {
+        (rects: wx.BoundingClientRectCallbackResult[]) => {
           const rect = rects[active];
           const width = lineWidth !== -1 ? lineWidth : rect.width / 2;
           const height = lineHeight !== -1 ? `height: ${lineHeight}px;` : '';
