@@ -43,7 +43,9 @@ VantComponent({
   },
 
   mounted() {
-    this.setValues();
+    setTimeout(() => {
+      this.setValues();
+    }, 50);
   },
 
   methods: {
