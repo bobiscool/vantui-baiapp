@@ -1,3 +1,4 @@
+// 百度小程序 filter 貌似不支持  require 全部合到一起吧
 function isArray(array) {
   return array && array.constructor === 'Array';
 }
