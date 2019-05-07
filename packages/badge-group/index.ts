@@ -26,7 +26,9 @@ VantComponent({
     this.badges = [];
     this.currentActive = -1;
   },
-
+  created() {
+    this.setSlotChild();        
+  },
   methods: {
     setActive(active: number) {
       const { badges, currentActive } = this;
