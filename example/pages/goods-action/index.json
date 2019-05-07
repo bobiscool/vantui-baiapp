@@ -1,3 +1,19 @@
 {
-  "navigationBarTitleText": "GoodsAction 商品导航"
+  "navigationBarTitleText": "GoodsAction 商品导航",
+  "usingComponents":{
+    "demo-block": "../../components/demo-block/index",
+    "van-button": "../../dist/button/index",
+    "van-icon": "../../dist/icon/index",
+    "van-badge": "../../dist/badge/index",
+    "van-badge-group": "../../dist/badge-group/index",
+    "van-tabbar": "../../dist/tabbar/index",
+    "van-tabbar-item": "../../dist/tabbar-item/index",
+    "van-area": "../../dist/area/index",
+    "van-card": "../../dist/card/index",
+    "van-submit-bar": "../../dist/submit-bar/index",
+    "van-goods-action": "../../dist/goods-action/index",
+    "van-goods-action-icon": "../../dist/goods-action-icon/index",
+    "van-goods-action-button": "../../dist/goods-action-button/index",
+    "van-toast": "../../dist/toast/index"
+  }
 }
