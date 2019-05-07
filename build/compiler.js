@@ -35,7 +35,7 @@ const compileLess = dist => () =>
     )
     .pipe(
       rename(path => {
-        path.extname = '.wxss';
+        path.extname = '.css';
       })
     )
     .pipe(gulp.dest(dist));
@@ -56,8 +56,8 @@ const compile = (dist, config) =>
   gulp.parallel(
     compileTs(dist, config),
     compileLess(dist),
-    copy(dist, 'wxml'),
-    copy(dist, 'wxs'),
+    copy(dist, 'swan'),
+    copy(dist, 'filter.js'),
     copy(dist, 'json')
   );
 
@@ -68,7 +68,7 @@ if (isProduction) {
 
   gulp.watch(`${src}/**/*.ts`, compileTs(exampleDir));
   gulp.watch(`${src}/**/*.less`, compileLess(exampleDir));
-  gulp.watch(`${src}/**/*.swan`, copy(exampleDir, 'wxml'));
-  gulp.watch(`${src}/**/*.wxs`, copy(exampleDir, 'wxs'));
+  gulp.watch(`${src}/**/*.swan`, copy(exampleDir, 'swan'));
+  gulp.watch(`${src}/**/*.filter.js`, copy(exampleDir, 'filter.js'));
   gulp.watch(`${src}/**/*.json`, copy(exampleDir, 'json'));
 }
