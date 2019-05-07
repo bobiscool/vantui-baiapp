@@ -51,7 +51,7 @@ VantComponent({
   methods: {
     getPicker() {
       if (this.picker == null) {
-        this.picker = this.selectComponent('.van-area__picker');
+        this.picker = this.selectComponent('.picker');
       }
       return this.picker;
     },
