@@ -1,0 +1,12 @@
+*.log*
+.cache
+.DS_Store
+.idea
+.vscode
+node_modules
+project.config.json
+docs/dist
+example/dist
+.history
+changelog.generated.md
+package-lock.json

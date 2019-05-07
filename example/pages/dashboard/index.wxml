@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="title">
+    <image class="logo" src="https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png" />
+    <view class="title-text">Vant Weapp</view>
+  </view>
+  <view class="desc">轻量、可靠的小程序 UI 组件库</view>
+
+  <van-collapse
+    wx:for="{{ list }}"
+    wx:for-item="group"
+    wx:key="group.title"
+    value="{{ activeNames }}"
+    border="{{ false }}"
+    bind:change="onChangeCollapse"
+  >
+    <van-collapse-item
+      clickable
+      is-link="{{ false }}"
+      custom-class="mobile-nav"
+      title-class="mobile-nav__title"
+      content-class="mobile-nav__content"
+      title="{{ group.groupName }}"
+      name="{{ group.groupName }}"
+    >
+      <van-icon
+        name="{{ group.icon }}"
+        slot="right-icon"
+        custom-class="mobile-nav__icon"
+      />
+      <van-cell
+        wx:for="{{ group.list }}"
+        wx:key="item.title"
+        is-link
+        url="/pages{{ item.path }}/index"
+        title="{{ item.title }}"
+      />
+    </van-collapse-item>
+  </van-collapse>
+</view>
