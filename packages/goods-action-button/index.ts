@@ -18,6 +18,7 @@ VantComponent({
 
   methods: {
     onClick(event: Weapp.Event) {
+      console.log('click');
       this.$emit('click', event.detail);
       this.jumpLink();
     }

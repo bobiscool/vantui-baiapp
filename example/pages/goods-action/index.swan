@@ -1,35 +1,39 @@
 <demo-block title="基础用法">
-  <van-goods-action custom-class="goods-action" safe-area-inset-bottom="{{ false }}">
+  <van-goods-action custom-class="goods-action" safe-area-inset-bottom="{{ false }}" wid="1">
     <van-goods-action-icon
       icon="chat-o"
       text="客服"
       open-type="contact"
+      pid="1"
     />
     <van-goods-action-icon
       icon="cart-o"
       text="购物车"
       bind:click="onClickIcon"
+      pid="1"
     />
     <van-goods-action-button
       text="加入购物车"
       type="warning"
       bind:click="onClickButton"
+      pid="1"
     />
     <van-goods-action-button
       text="立即购买"
       bind:click="onClickButton"
+      pid="1"
     />
   </van-goods-action>
 </demo-block>
 
-<demo-block title="图标提示">
-  <van-goods-action custom-class="goods-action" safe-area-inset-bottom="{{ false }}">
-    <van-goods-action-icon icon="chat-o" text="客服" />
-    <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
-    <van-goods-action-icon icon="shop-o" text="店铺" />
-    <van-goods-action-button text="加入购物车" type="warning" />
+<!-- <demo-block title="图标提示">
+  <van-goods-action custom-class="goods-action" safe-area-inset-bottom="{{ false }}" wid="2">
+    <van-goods-action-icon icon="chat-o" text="客服" pid="2"/>
+    <van-goods-action-icon icon="cart-o" text="购物车" info="5" pid="2"/>
+    <van-goods-action-icon icon="shop-o" text="店铺" pid="2"/>
+    <van-goods-action-button text="加入购物车" type="warning" pid="2"/>
     <van-goods-action-button text="立即购买" />
   </van-goods-action>
-</demo-block>
+</demo-block> -->
 
 <van-toast id="van-toast" />
