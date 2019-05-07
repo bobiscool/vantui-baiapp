@@ -44,6 +44,6 @@ Page({
   },
 
   onClickLeft() {
-    wx.navigateBack();
+    swan.navigateBack();
   }
 });

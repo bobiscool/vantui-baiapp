@@ -13,7 +13,7 @@ Page({
 
   onSearch(event) {
     if (this.data.value) {
-      wx.showToast({
+      swan.showToast({
         title: '搜索：' + this.data.value,
         icon: 'none'
       });
@@ -21,14 +21,14 @@ Page({
   },
 
   onCancel() {
-    wx.showToast({
+    swan.showToast({
       title: '取消',
       icon: 'none'
     });
   },
 
   onClear() {
-    wx.showToast({
+    swan.showToast({
       title: '清空',
       icon: 'none'
     });

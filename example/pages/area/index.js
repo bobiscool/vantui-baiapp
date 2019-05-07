@@ -9,7 +9,7 @@ Page({
   },
 
   onShow() {
-    wx.request({
+    swan.request({
       url: 'https://cashier.youzan.com/wsctrade/uic/address/getAllRegion.json',
       success: response => {
         this.setData({

@@ -12,7 +12,7 @@ Page({
   },
 
   onClickIcon() {
-    wx.showToast({
+    swan.showToast({
       icon: 'none',
       title: '点击图标'
     });

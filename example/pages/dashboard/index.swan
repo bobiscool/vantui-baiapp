@@ -6,9 +6,9 @@
   <view class="desc">轻量、可靠的小程序 UI 组件库</view>
 
   <van-collapse
-    wx:for="{{ list }}"
-    wx:for-item="group"
-    wx:key="group.title"
+    s-for="{{ list }}"
+    s-for-item="group"
+    s-key="group.title"
     value="{{ activeNames }}"
     border="{{ false }}"
     bind:change="onChangeCollapse"
@@ -28,8 +28,8 @@
         custom-class="mobile-nav__icon"
       />
       <van-cell
-        wx:for="{{ group.list }}"
-        wx:key="item.title"
+        s-for="{{ group.list }}"
+        s-key="item.title"
         is-link
         url="/pages{{ item.path }}/index"
         title="{{ item.title }}"

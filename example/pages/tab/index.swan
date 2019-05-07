@@ -1,8 +1,8 @@
 <demo-block title="基础用法">
   <van-tabs active="{{ 1 }}" bind:change="onChange">
     <van-tab
-      wx:for="1234"
-      wx:key="index"
+      s-for="1234"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content">
@@ -21,8 +21,8 @@
       bind:click="onClickNavRight"
     />
     <van-tab
-      wx:for="1234"
-      wx:key="index"
+      s-for="1234"
+      s-key="index"
       title="{{ '标签' + item }}"
       dot="{{ index === 1 }}"
       info="{{ index === 2 ? 99 : null }}"
@@ -37,8 +37,8 @@
 <demo-block title="横向滚动">
   <van-tabs>
     <van-tab
-      wx:for="123456"
-      wx:key="index"
+      s-for="123456"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content">
@@ -51,8 +51,8 @@
 <demo-block title="禁用标签">
   <van-tabs bind:disabled="onClickDisabled">
     <van-tab
-      wx:for="123"
-      wx:key="index"
+      s-for="123"
+      s-key="index"
       disabled="{{ index === 1 }}"
       title="{{ '标签' + item }}"
     >
@@ -66,8 +66,8 @@
 <demo-block title="样式风格">
   <van-tabs type="card">
     <van-tab
-      wx:for="123"
-      wx:key="index"
+      s-for="123"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content-2">
@@ -80,8 +80,8 @@
 <demo-block title="点击事件">
   <van-tabs bind:click="onClick">
     <van-tab
-      wx:for="12"
-      wx:key="index"
+      s-for="12"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content">
@@ -94,8 +94,8 @@
 <demo-block title="粘性布局">
   <van-tabs sticky>
     <van-tab
-      wx:for="1234"
-      wx:key="index"
+      s-for="1234"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content">
@@ -108,8 +108,8 @@
 <demo-block title="切换动画">
   <van-tabs animated>
     <van-tab
-      wx:for="1234"
-      wx:key="index"
+      s-for="1234"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content" style="height: 400px;">
@@ -122,8 +122,8 @@
 <demo-block title="滑动切换">
   <van-tabs swipeable>
     <van-tab
-      wx:for="1234"
-      wx:key="index"
+      s-for="1234"
+      s-key="index"
       title="{{ '标签' + item }}"
     >
       <view class="content">
