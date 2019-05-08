@@ -18,7 +18,9 @@ VantComponent({
   data: {
     active: false
   },
-
+  created: function() {
+    this.parent = this.getSlotParent();
+  },
   methods: {
     onClick() {
       if (this.parent) {
