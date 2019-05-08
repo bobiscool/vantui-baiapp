@@ -1,10 +1,8 @@
 <filter src="../_filter/utils.filter.js" module="utils" />
 
 <view
-  s-if="{{ animated || inited }}"
   class="custom-class {{ utils.bem('tab__pane', { active, inactive: !active }) }}"
-  style="{{ utils.judge(animated || active , '' , 'display: none;') }} {{ utils.judge(width , 'width:' + width + 'px;' , '') }}"
+  style="{{ utils.judge(active || animated , '' , 'display: none;') }} {{ utils.judge(width , 'width:' + width + 'px;' , '') }}"
 >
-123123213
   <slot />
 </view>

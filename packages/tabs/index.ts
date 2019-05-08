@@ -89,6 +89,7 @@ VantComponent({
       let tabs = children.map(a => {
         return {...a.data}
       });
+      this.child = children;
       this.updateTabs(tabs);
     });        
   },

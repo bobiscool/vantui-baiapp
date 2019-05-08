@@ -31,7 +31,7 @@
   </van-tabs>
 </demo-block>
 
-<!-- <demo-block title="自定义标题">
+<demo-block title="自定义标题">
   <van-tabs active="{{ 1 }}" bind:change="onChange" tab-class="tab-class" tab-active-class="tab-active-class" wid="2">
     <van-icon
       slot="nav-right"
@@ -158,4 +158,4 @@
       </view>
     </van-tab>
   </van-tabs>
-</demo-block> -->
+</demo-block>
