@@ -2,7 +2,7 @@ page {
   padding-bottom: 0;
 }
 
-.col {
+.van-col {
   text-align: center;
   height: 100px;
   float: none;
