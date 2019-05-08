@@ -2,7 +2,7 @@
 
 <button
   id="{{ id }}"
-  class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ hairline ? 'van-hairline--surround' : '' }}"
+  class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ utils.judge(hairline , 'van-hairline--surround' , '') }}"
   open-type="{{ openType }}"
   hover-class="van-button--active hover-class"
   lang="{{ lang }}"
@@ -26,7 +26,7 @@
     <van-loading
       custom-class="loading-class"
       size="{{ loadingSize }}"
-      color="{{ type === 'default' ? '#c9c9c9' : '' }}"
+      color="{{ utils.judge(type === 'default' , '#c9c9c9' , '')}}"
     />
     <view
       s-if="{{ loadingText }}"

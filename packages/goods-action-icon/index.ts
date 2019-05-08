@@ -15,7 +15,9 @@ VantComponent({
     disabled: Boolean,
     loading: Boolean
   },
-
+  created: function() {
+    console.log(this.is);
+  },
   methods: {
     onClick(event: Weapp.Event) {
       this.$emit('click', event.detail);

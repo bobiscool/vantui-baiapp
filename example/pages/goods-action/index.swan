@@ -23,6 +23,7 @@
       bind:click="onClickButton"
       pid="1"
     />
+
   </van-goods-action>
 </demo-block>
 

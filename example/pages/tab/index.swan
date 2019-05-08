@@ -1,9 +1,29 @@
 <demo-block title="基础用法">
-  <van-tabs active="{{ 1 }}" bind:change="onChange" wid="1">
+  <van-tabs active="{{ 0 }}" bind:change="onChange" wid="1">
     <van-tab
       title="{{ '标签' + 1 }}"
-      pid="1"
-    >
+      pid="1">
+      <view class="content">
+        123
+      </view>
+    </van-tab>
+    <van-tab
+      title="{{ '标签' + 2 }}"
+      pid="1">
+      <view class="content">
+        123
+      </view>
+    </van-tab>
+    <van-tab
+      title="{{ '标签' + 3 }}"
+      pid="1">
+      <view class="content">
+        123
+      </view>
+    </van-tab>
+    <van-tab
+      title="{{ '标签' + 4 }}"
+      pid="1">
       <view class="content">
         123
       </view>

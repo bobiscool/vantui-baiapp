@@ -86,7 +86,10 @@ VantComponent({
   },
   created() {
     this.setSlotChild().then(children => {
-      this.child = children;
+      let tabs = children.map(a => {
+        return {...a.data}
+      });
+      this.updateTabs(tabs);
     });        
   },
   mounted() {

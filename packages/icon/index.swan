@@ -1,8 +1,8 @@
 <filter src="../_filter/utils.filter.js" module="utils" />
 
 <view
-  class="custom-class {{ classPrefix }} {{ utils.isSrc(name) ? 'van-icon--image' : classPrefix + '-' + name }}"
-  style="{{ color ? 'color: ' + color + ';' : '' }}{{ size ? 'font-size: ' + size + ';' : '' }}{{ customStyle }}"
+  class="custom-class {{ classPrefix }} {{ utils.judge(utils.isSrc(name), 'van-icon--image' ,classPrefix + '-' + name)}}"
+  style="{{ utils.judge(color , 'color: ' + color + ';' , '') }}{{ utils.judge(size , 'font-size: ' + size + ';' , '') }}{{ customStyle }}"
   bind:tap="onClick"
 >
   <van-info

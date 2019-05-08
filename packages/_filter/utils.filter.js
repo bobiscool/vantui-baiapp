@@ -114,5 +114,9 @@ export default {
   bem: function(a, b) {
     return memBem(a, b);
   },
-  isSrc: isSrc
+  isSrc: isSrc,
+  // 百度小程序 模板 貌似不支持三目
+  judge: function(cond, a, b) {
+    return cond ? a : b;
+  }
 };
