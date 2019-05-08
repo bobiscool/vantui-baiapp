@@ -11,7 +11,7 @@ export const link = Behavior({
     jumpLink(urlKey = 'url') {
       const url = this.data[urlKey];
       if (url) {
-        wx[this.data.linkType]({ url });
+        swan[this.data.linkType]({ url });
       }
     }
   }
