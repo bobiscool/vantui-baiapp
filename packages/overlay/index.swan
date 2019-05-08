@@ -1,7 +1,9 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
 <van-transition
   show="{{ show }}"
   custom-class="van-overlay"
-  custom-style="z-index: {{ zIndex }}; {{ mask ? 'background-color: rgba(0, 0, 0, .7);' : '' }}; {{ customStyle }}"
+  custom-style="z-index: {{ zIndex }}; {{ utils.judge(mask, 'background-color: rgba(0, 0, 0, .7);' , '' )}}; {{ customStyle }}"
   duration="{{ duration }}"
   bind:tap="onClick"
   catch:touchmove="noop"

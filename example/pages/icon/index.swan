@@ -14,7 +14,7 @@
       <van-icon
         name="{{ item }}"
         size="32px"
-        custom-class="icon"
+        custom-class="my-icon"
       />
       <view class="text">{{ item }}</view>
     </van-col>

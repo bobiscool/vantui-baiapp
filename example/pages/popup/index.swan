@@ -9,7 +9,7 @@
   <van-button bind:click="togglePopup">弹出 Popup</van-button>
   <van-popup
     show="{{ show.middle }}"
-    custom-class="center"
+    custom-class="go-center"
     transition="none"
     bind:close="togglePopup"
     bind:transitionEnd="onTransitionEnd"
@@ -24,7 +24,7 @@
   <van-popup
     show="{{ show.bottom }}"
     position="bottom"
-    custom-class="bottom"
+    custom-class="go-bottom"
     bind:close="toggleBottomPopup"
     bind:transitionEnd="onTransitionEnd"
   >
@@ -37,7 +37,7 @@
     position="top"
     safe-area-inset-top
     overlay="{{ false }}"
-    custom-class="top"
+    custom-class="go-top"
     bind:close="toggleTopPopup"
     bind:transitionEnd="onTransitionEnd"
   >
@@ -49,7 +49,7 @@
     show="{{ show.right }}"
     position="right"
     safe-area-inset-top
-    custom-class="right"
+    custom-class="go-right"
     bind:close="toggleRightPopup"
     bind:transitionEnd="onTransitionEnd"
   >
@@ -60,7 +60,7 @@
       show="{{ show.right2 }}"
       position="right"
       safe-area-inset-top
-      custom-class="right"
+      custom-class="go-right"
       bind:close="toggleRightPopup2"
       bind:transitionEnd="onTransitionEnd"
     >
