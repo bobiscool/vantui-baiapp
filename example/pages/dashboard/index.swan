@@ -4,57 +4,18 @@
     <view class="title-text">Vant Weapp</view>
   </view>
   <view class="desc">轻量、可靠的小程序 UI 组件库</view>
-
-  <van-button type="primary" square class="demo-margin-right">方形按钮</van-button>
- <van-card
-      num="2"
-      price="2.00"
-      desc="描述信息"
-      title="2018秋冬新款男士休闲时尚军绿飞行夹克秋冬新款男"
-      thumb="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556969042546&di=2c6c6856e3b9286b805c5c11fb924b65&imgtype=0&src=http%3A%2F%2Fwww.jlv8.com%2Fimages%2F201404%2Fgoods_img%2F423_G_1398410237084.jpg"/>
-
-
-    
-<!-- <view s-for="group,index in list">
-  <view style="font-weight: bold;">{{group.groupName}}</view>
-    <view  s-for="group.list">
-        <navigator url="/pages{{ item.path }}/index">
-        {{item.title}}
-        </navigator>
-    </view>
-</view> -->
-  <van-collapse
-    s-for="group, index in list"
-    s-key="group.title"
-    value="{{ activeNames }}"
-    border="{{ false }}"
-    bind:change="onChangeCollapse"
-    wid="{{index+1}}"
-  >
-    <van-collapse-item
-      clickable
-      is-link="{{ false }}"
-      custom-class="mobile-nav"
-      title-class="mobile-nav__title"
-      content-class="mobile-nav__content"
-      title="{{ group.groupName }}"
-      name="{{ group.groupName }}"
-      pid="{{index+1}}"
-    >
-      <van-icon
-        name="{{ group.icon }}"
-        slot="right-icon"
-        custom-class="mobile-nav__icon"
-      />
-      <van-cell
-        s-for="{{ group.list }}"
-        s-key="item.title"
-        is-link
-        url="/pages{{ item.path }}/index"
-        title="{{ item.title }}"
-      />
-    </van-collapse-item>
-  </van-collapse>
-
+      <view class="mobile-nav" s-for="item,index in list" >
+        <view class="mobile-nav__title">{{ item.groupName }}</view>
+        <van-cell-group wid="{{index+1}}">
+          <van-cell
+            s-for="_item, _index in item.list"
+            s-key="_item.title"
+            is-link
+            url="/pages{{ _item.path }}/index"
+            title="{{ _item.title }}"
+            pid="{{index+1}}"
+          ></van-cell>
+        </van-cell-group>
+      </view>
 
 </view>

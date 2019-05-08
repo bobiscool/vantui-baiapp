@@ -16,8 +16,8 @@
   <slot s-else name="icon" />
 
   <view
+    class="van-cell__title {{titleClass}}"
     style="{{ utils.judge(titleWidth , 'max-width:' + titleWidth + ';min-width:' + titleWidth , '') }}"
-    class="van-cell__title title-class"
   >
     <block s-if="{{ title }}">{{ title }}</block>
     <slot s-else name="title" />

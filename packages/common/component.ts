@@ -31,7 +31,8 @@ function VantComponent<Data, Props, Watch, Methods, Computed>(
     mounted: 'ready',
     relations: 'relations',
     destroyed: 'detached',
-    classes: 'externalClasses'
+    classes: 'externalClasses',
+    options: 'options'
   });
 
   const { relation } = vantOptions;

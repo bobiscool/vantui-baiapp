@@ -3,13 +3,14 @@ import { VantComponent } from '../common/component';
 
 VantComponent({
   classes: [
-    'title-class',
     'label-class',
     'value-class',
     'right-icon-class',
     'hover-class'
   ],
-
+  options: {
+    addGlobalClass: true
+  },
   mixins: [link],
 
   props: {
@@ -23,6 +24,7 @@ VantComponent({
     required: Boolean,
     clickable: Boolean,
     titleWidth: String,
+    titleClass: String,
     customStyle: String,
     arrowDirection: String,
     useLabelSlot: Boolean,
