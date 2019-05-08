@@ -32,7 +32,11 @@ VantComponent({
   beforeCreate() {
     this.children = [];
   },
-
+  created() {
+    this.setSlotChild().then(children => {
+      this.children = children;
+    });
+  },
   methods: {
     updateExpanded() {
       this.children.forEach((child: Weapp.Component) => {

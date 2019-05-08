@@ -38,6 +38,7 @@ VantComponent({
   },
 
   mounted() {
+    this.parent = this.getSlotParent();
     this.updateExpanded()
       .then(nextTick)
       .then(() => {
@@ -47,6 +48,7 @@ VantComponent({
 
   methods: {
     updateExpanded() {
+    this.parent = this.getSlotParent();
       if (!this.parent) {
         return Promise.resolve();
       }
@@ -93,7 +95,7 @@ VantComponent({
       if (this.data.disabled) {
         return;
       }
-
+      this.parent = this.getSlotParent();
       const { name, expanded } = this.data;
       const index = this.parent.children.indexOf(this);
       const currentName = name == null ? index : name;

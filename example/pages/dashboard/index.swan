@@ -15,20 +15,21 @@
 
 
     
-<view s-for="group,index in list">
+<!-- <view s-for="group,index in list">
   <view style="font-weight: bold;">{{group.groupName}}</view>
     <view  s-for="group.list">
         <navigator url="/pages{{ item.path }}/index">
         {{item.title}}
         </navigator>
     </view>
-</view>
+</view> -->
   <van-collapse
-    s-for="group,index in list"
+    s-for="group, index in list"
     s-key="group.title"
     value="{{ activeNames }}"
     border="{{ false }}"
     bind:change="onChangeCollapse"
+    wid="{{index+1}}"
   >
     <van-collapse-item
       clickable
@@ -38,6 +39,7 @@
       content-class="mobile-nav__content"
       title="{{ group.groupName }}"
       name="{{ group.groupName }}"
+      pid="{{index+1}}"
     >
       <van-icon
         name="{{ group.icon }}"
