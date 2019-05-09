@@ -41,10 +41,20 @@ function getMonthEndDay(year: number, month: number): number {
 const defaultFormatter = (_, value) => value;
 
 VantComponent({
-  classes: ['active-class', 'toolbar-class', 'column-class'],
-
   props: {
     ...pickerProps,
+    activeClass: {
+      type: String,
+      value: ''
+    },
+    columnClass: {
+      type: String,
+      value: ''
+    },
+    toolbarClass: {
+      type: String,
+      value: ''
+    },
     formatter: {
       type: Function,
       value: defaultFormatter

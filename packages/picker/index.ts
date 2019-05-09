@@ -88,6 +88,7 @@ VantComponent({
 
     // get column instance by index
     getColumn(index: number) {
+      this.children = this.selectAllComponents('.column');
       return this.children[index];
     },
 
