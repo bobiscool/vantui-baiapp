@@ -21,9 +21,9 @@
     name=""
     duration="{{ { enter: 300, leave: 1000 } }}"
     custom-class="block"
-    enter-class="van-enter-class"
-    enter-active-class="van-enter-active-class"
-    leave-active-class="van-leave-active-class"
-    leave-to-class="leave-to-class"
+    enter-class="enterClass"
+    enter-active-class="enterActiveClass"
+    leave-active-class="leaveActiveClass"
+    leave-to-class="leaveToClass"
   />
 </demo-block>
