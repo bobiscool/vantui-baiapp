@@ -7,9 +7,13 @@ VantComponent({
     'enter-active-class',
     'enter-to-class',
     'leave-class',
-    'leave-active-class',
     'leave-to-class'
   ],
-
+  props: {
+      leaveToClass: String
+  },
+  options: {
+    addGlobalClass: true
+  },
   mixins: [transition(true)]
 });

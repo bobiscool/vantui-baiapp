@@ -14,7 +14,7 @@
 }
 
 .van-enter-class,
-.van-leave-to-class {
+.leave-to-class {
   background-color: red;
   transform: rotate(-360deg) translate3d(-100%, -100%, 0);
 }

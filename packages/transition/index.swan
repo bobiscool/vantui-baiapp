@@ -1,7 +1,8 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
 <view
   s-if="{{ inited }}"
-  class="van-transition custom-class {{ classes }}"
-  style="-webkit-transition-duration:{{ currentDuration }}ms; transition-duration:{{ currentDuration }}ms; {{ display ? '' : 'display: none;' }} {{ customStyle }}"
+  class="van-transition custom-class {{ classes }} {{ leaveToClass }}"
+  style="-webkit-transition-duration:{{ currentDuration }}ms; transition-duration:{{ currentDuration }}ms; {{ utils.judge(display , '' , 'display: none;') }} {{ customStyle }}"
   bind:transitionend="onTransitionEnd"
 >
   <slot />

@@ -24,6 +24,6 @@
     enter-class="van-enter-class"
     enter-active-class="van-enter-active-class"
     leave-active-class="van-leave-active-class"
-    leave-to-class="van-leave-to-class"
+    leave-to-class="leave-to-class"
   />
 </demo-block>
