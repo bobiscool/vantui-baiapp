@@ -14,7 +14,14 @@ VantComponent({
       });
     }
   },
-
+  data: {
+    children: []
+  },
+  created: function() {
+    this.setSlotChild().then(children => {
+      this.children = children || [];
+    });
+  },
   props: {
     max: Number,
     value: Array,
@@ -23,14 +30,14 @@ VantComponent({
 
   watch: {
     value(value) {
-      const children = this.getRelationNodes('../checkbox/index');
+      const children = this.children || [];
       children.forEach(child => {
         child.set({ value: value.indexOf(child.data.name) !== -1 });
       });
     },
 
     disabled(disabled: boolean) {
-      const children = this.getRelationNodes('../checkbox/index');
+      const children = this.children || [];
       children.forEach(child => {
         child.set({ disabled: disabled || child.data.disabled });
       });

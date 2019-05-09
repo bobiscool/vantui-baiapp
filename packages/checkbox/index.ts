@@ -25,7 +25,7 @@ VantComponent({
 
   methods: {
     emitChange(value) {
-      const parent = this.getRelationNodes('../checkbox-group/index')[0];
+      const parent = this.getSlotParent();
       if (parent) {
         this.setParentValue(parent, value);
       } else {
