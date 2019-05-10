@@ -1,3 +1,25 @@
 {
-  "navigationBarTitleText": "SwitchCell 开关单元格"
+  "navigationBarTitleText": "SwitchCell 开关单元格",
+  "usingComponents": {
+    "demo-block": "../../components/demo-block/index",
+    "van-button": "../../dist/button/index",
+    "van-icon": "../../dist/icon/index",
+    "van-badge": "../../dist/badge/index",
+    "van-badge-group": "../../dist/badge-group/index",
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-nav-bar": "../../dist/nav-bar/index",
+    "van-notice-bar": "../../dist/notice-bar/index",
+    "van-cell": "../../dist/cell/index",
+    "van-cell-group": "../../dist/cell-group/index",
+    "van-col": "../../dist/col/index",
+    "van-row": "../../dist/row/index",
+    "van-popup": "../../dist/popup/index",
+    "van-rate": "../../dist/rate/index",
+    "van-search": "../../dist/search/index",
+    "van-slider": "../../dist/slider/index",
+    "van-switch": "../../dist/switch/index",
+    "van-switch-cell": "../../dist/switch-cell/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
 }

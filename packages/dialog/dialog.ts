@@ -57,7 +57,6 @@ const Dialog: Dialog = options => {
     const context = options.context || getContext();
     const dialog = context.selectComponent(options.selector);
     delete options.selector;
-
     if (dialog) {
       dialog.set({
         onCancel: reject,

@@ -12,6 +12,7 @@ VantComponent({
     disabled: Boolean,
     activeColor: String,
     inactiveColor: String,
+    pid: String,
     size: {
       type: String,
       value: '24px'

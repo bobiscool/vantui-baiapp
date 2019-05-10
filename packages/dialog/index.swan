@@ -1,3 +1,5 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
 <van-popup
   show="{{ show }}"
   z-index="{{ zIndex }}"
@@ -9,7 +11,7 @@
 >
   <view
     s-if="{{ title }}"
-    class="van-dialog__header {{ message || useSlot ? '' : 'van-dialog--isolated' }}"
+    class="van-dialog__header {{ message || utils.judge(useSlot , '' , 'van-dialog--isolated') }}"
   >
     {{ title }}
   </view>
@@ -17,7 +19,8 @@
   <slot s-if="{{ useSlot }}" />
   <view
     s-elif="{{ message }}"
-    class="van-dialog__message {{ title ? 'van-dialog__message--has-title' : '' }} {{ messageAlign ? 'van-dialog__message--' + messageAlign : '' }}"
+    class="van-dialog__message {{ utils.judge
+      (title , 'van-dialog__message--has-title' , '' )}} {{ utils.judge(messageAlign , 'van-dialog__message--' + messageAlign , '') }}"
   >
     <text>{{ message }}</text>
   </view>

@@ -1,31 +1,34 @@
 <demo-block title="基础用法">
-  <van-cell-group>
+  <van-cell-group wid="1">
     <van-switch-cell
       title="标题"
       checked="{{ checked }}"
       bind:change="onChange"
+      pid="1"
     />
   </van-cell-group>
 </demo-block>
 
 <demo-block title="禁用状态">
-  <van-cell-group>
+  <van-cell-group wid="2">
     <van-switch-cell
       disabled
       title="标题"
       checked="{{ checked }}"
       bind:change="onChange"
+      pid="2"
     />
   </van-cell-group>
 </demo-block>
 
 <demo-block title="加载状态">
-  <van-cell-group>
+  <van-cell-group wid="3">
     <van-switch-cell
       loading
       title="标题"
       checked="{{ checked }}"
       bind:change="onChange"
+      pid="3"
     />
   </van-cell-group>
 </demo-block>

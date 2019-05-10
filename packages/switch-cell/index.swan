@@ -3,6 +3,7 @@
   title="{{ title }}"
   border="{{ border }}"
   custom-class="van-switch-cell"
+  pid="{{pid}}"
 >
   <van-switch
     size="{{ size }}"
