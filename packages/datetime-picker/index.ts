@@ -307,7 +307,7 @@ VantComponent({
 
       this.updateColumnValue(value).then(() => {
         this.$emit('input', value);
-        this.$emit('change', picker);
+        this.$emit('change', picker.nodeId);
       });
     },
 

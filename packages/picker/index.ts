@@ -7,10 +7,20 @@ interface Column {
 }
 
 VantComponent({
-  classes: ['active-class', 'toolbar-class', 'column-class'],
-
   props: {
     ...pickerProps,
+    activeClass:{
+      type: String,
+      value: ''
+    },
+    toolbarClass:{
+      type: String,
+      value: ''
+    },
+    columnClass:{
+      type: String,
+      value: ''
+    },
     valueKey: {
       type: String,
       value: 'text'

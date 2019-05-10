@@ -36,13 +36,13 @@
       s-for="{{ columns }}"
       s-key="{{ index }}"
       data-index="{{ index }}"
-      custom-class="column-class"
+      custom-class="{{ columnClass }}"
       value-key="{{ valueKey }}"
       initial-options="{{ item.values }}"
       default-index="{{ item.defaultIndex || defaultIndex }}"
       item-height="{{ itemHeight }}"
       visible-item-count="{{ visibleItemCount }}"
-      active-class="active-class"
+      active-class="{{ activeClass }}"
       bind:change="onChange"
     />
     <view

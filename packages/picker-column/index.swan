@@ -1,3 +1,5 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
 <view
   class="van-picker-column custom-class"
   style="height: {{ itemHeight * visibleItemCount }}px"
@@ -12,7 +14,7 @@
       s-key="index"
       data-index="{{ index }}"
       style="height: {{ itemHeight }}px"
-      class="van-ellipsis van-picker-column__item {{ item && item.disabled ? 'van-picker-column__item--disabled' : '' }} {{ index === currentIndex ? 'van-picker-column__item--selected active-class' : '' }}"
+      class="van-ellipsis van-picker-column__item {{ utils.judge(item && item.disabled , 'van-picker-column__item--disabled' , '') }} {{ utils.judge(index === currentIndex , 'van-picker-column__item--selected active-class' , '') }}"
       bindtap="onClickItem"
     >{{ getOptionText.getText(item, valueKey) }}</view>
   </view>

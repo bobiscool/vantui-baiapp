@@ -1,8 +1,8 @@
 <van-picker
   class="van-datetime-picker"
-  active-class="{{activeClass}}"
-  toolbar-class="{{toolbarClass}}"
-  column-class="{{columnClass}}"
+  activeClass="{{activeClass}}"
+  toolbarClass="{{toolbarClass}}"
+  columnClass="{{columnClass}}"
   title="{{ title }}"
   columns="{{ columns }}"
   item-height="{{ itemHeight }}"
