@@ -3,7 +3,7 @@ import { VantComponent } from '../common/component';
 VantComponent({
   field: true,
 
-  classes: ['field-class', 'input-class', 'cancel-class'],
+  classes: ['field-class', 'cancel-class'],
 
   props: {
     focus: Boolean,
@@ -15,6 +15,7 @@ VantComponent({
     useActionSlot: Boolean,
     placeholder: String,
     placeholderStyle: String,
+    inputClass: String,
     background: {
       type: String,
       value: '#ffffff'

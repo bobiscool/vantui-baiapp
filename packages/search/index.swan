@@ -22,7 +22,7 @@
       readonly="{{ readonly }}"
       maxlength="{{ maxlength }}"
       input-align="{{ inputAlign }}"
-      input-class="input-class"
+      input-class="{{ inputClass }}"
       placeholder="{{ placeholder }}"
       placeholder-style="{{ placeholderStyle }}"
       custom-style="padding: 5px 10px 5px 0; background-color: transparent;"
