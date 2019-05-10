@@ -53,7 +53,7 @@ VantComponent({
     onSelectItem(event: Weapp.Event) {
       const { item } = event.currentTarget.dataset;
       if (!item.disabled) {
-        this.$emit('click-item', item);
+        this.$emit('clickItem', item);
       }
     },
 
@@ -62,7 +62,7 @@ VantComponent({
       const { index } = event.currentTarget.dataset;
       const item = this.data.items[index];
       if (!item.disabled) {
-        this.$emit('click-nav', { index });
+        this.$emit('clickNav', { index });
       }
     },
 

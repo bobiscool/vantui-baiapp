@@ -8,7 +8,7 @@
     <view
       s-for="{{ items }}"
       s-key="index"
-      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ mainActiveIndex === index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
+      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ utils.judge(mainActiveIndex === index , 'main-active-class' , '') }} {{ utils.judge(item.disabled , 'main-disabled-class' , '') }}"
       data-index="{{ index }}"
       bind:tap="onClickNav"
     >
@@ -23,7 +23,7 @@
     <view
       s-for="{{ subItems }}"
       s-key="id"
-      class="van-ellipsis van-hairline--bottom content-item-class {{ utils.bem('tree-select__item', { active: activeId === item.id, disabled: item.disabled }) }} {{ activeId === item.id ? 'content-active-class' : '' }} {{ item.disabled ? 'content-disabled-class' : '' }}"
+      class="van-ellipsis van-hairline--bottom content-item-class {{ utils.bem('tree-select__item', { active: activeId === item.id, disabled: item.disabled }) }} {{ utils.judge(activeId === item.id , 'content-active-class' , '') }} {{ utils.judge(item.disabled , 'content-disabled-class' , '') }}"
       data-item="{{ item }}"
       bind:tap="onSelectItem"
     >
