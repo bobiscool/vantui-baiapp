@@ -1,6 +1,8 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
 <view class="van-progress custom-class">
   <view
-    class="van-progress__portion {{ showPivot && text ? 'van-progress__portion--with-pivot' : '' }}"
+    class="van-progress__portion {{ utils.judge(showPivot && text , 'van-progress__portion--with-pivot' , '') }}"
     style="{{ portionStyle }}"
   >
     <view
