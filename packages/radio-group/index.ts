@@ -14,7 +14,22 @@ VantComponent({
       });
     }
   },
-
+  created: function() {
+    this.setSlotChild().then(children => {
+      this.children = children || [];
+      let value = this.data.value;
+      if (this.data.disabled) {
+        this.children.forEach(child => {
+        child.set({ disabled: true || child.data.disabled });
+        });
+      }
+      if(value) {
+          this.children.forEach(child => {
+            child.set({ value });
+          });
+      }
+    });
+  },
   props: {
     value: null,
     disabled: Boolean
@@ -22,14 +37,14 @@ VantComponent({
 
   watch: {
     value(value) {
-      const children = this.getRelationNodes('../radio/index');
+      const children = this.children || [];
       children.forEach(child => {
         child.set({ value });
       });
     },
 
     disabled(disabled: boolean) {
-      const children = this.getRelationNodes('../radio/index');
+      const children = this.children || [];
       children.forEach(child => {
         child.set({ disabled: disabled || child.data.disabled });
       });

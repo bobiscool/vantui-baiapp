@@ -4,9 +4,10 @@
     data-key="radio1"
     custom-class="demo-radio-group"
     bind:change="onChange"
+    wid="1"
   >
-    <van-radio name="1" custom-class="demo-radio">单选框 1</van-radio>
-    <van-radio name="2" custom-class="demo-radio">单选框 2</van-radio>
+    <van-radio name="1" custom-class="demo-radio" pid="1">单选框 1</van-radio>
+    <van-radio name="2" custom-class="demo-radio" pid="1">单选框 2</van-radio>
   </van-radio-group>
 </demo-block>
 
@@ -17,9 +18,10 @@
     data-key="radio2"
     custom-class="demo-radio-group"
     bind:change="onChange"
+    wid="2"
   >
-    <van-radio name="1" custom-class="demo-radio">单选框 1</van-radio>
-    <van-radio name="2" custom-class="demo-radio">单选框 2</van-radio>
+    <van-radio name="1" custom-class="demo-radio" pid="2">单选框 1</van-radio>
+    <van-radio name="2" custom-class="demo-radio" pid="2">单选框 2</van-radio>
   </van-radio-group>
 </demo-block>
 
@@ -35,13 +37,13 @@
 </demo-block>
 
 <demo-block title="与 Cell 组件一起使用">
-  <van-radio-group value="{{ radio3 }}">
+  <van-radio-group value="{{ radio3 }}" wid="3">
     <van-cell-group>
       <van-cell title="单选框 1" clickable data-value="1" bind:click="onClick">
-        <van-radio name="1" />
+        <van-radio name="1"  pid="3"/>
       </van-cell>
       <van-cell title="单选框 2" clickable data-value="2" bind:click="onClick">
-        <van-radio name="2" />
+        <van-radio name="2" pid="3"/>
       </van-cell>
     </van-cell-group>
   </van-radio-group>

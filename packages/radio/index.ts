@@ -21,7 +21,7 @@ VantComponent({
 
   methods: {
     emitChange(value) {
-      const instance = this.getRelationNodes('../radio-group/index')[0] || this;
+      const instance = this.getSlotParent() || this;
       instance.$emit('input', value);
       instance.$emit('change', value);
     },
