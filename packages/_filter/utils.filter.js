@@ -118,5 +118,9 @@ export default {
   // 百度小程序 模板 貌似不支持三目
   judge: function(cond, a, b) {
     return cond ? a : b;
+  },
+  // switch 太恐怖 n目
+  judgeSwitch(a, b, c, d, e, f) {
+    return ((a ? b : c) ? 'background-color: ' + (d ? e : f) : '');
   }
 };
