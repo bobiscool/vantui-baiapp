@@ -1,3 +1,4 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
 <van-overlay
   s-if="{{ mask || forbidClick }}"
   show="{{ show }}"
@@ -10,7 +11,7 @@
   custom-class="van-toast__container"
 >
   <view
-    class="van-toast van-toast--{{ type === 'text' ? 'text' : 'icon' }} van-toast--{{ position }}"
+    class="van-toast van-toast--{{ utils.judge(type === 'text' , 'text' , 'icon') }} van-toast--{{ position }}"
     catch:touchmove="noop"
   >
     <!-- text only -->

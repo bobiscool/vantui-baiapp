@@ -19,6 +19,7 @@ VantComponent({
       type: null,
       observer: 'updateExpanded'
     },
+    titleClass: String,
     accordion: {
       type: Boolean,
       observer: 'updateExpanded'
@@ -39,7 +40,7 @@ VantComponent({
   },
   methods: {
     updateExpanded() {
-      this.children.forEach((child: Weapp.Component) => {
+      this.children && this.children.forEach((child: Weapp.Component) => {
         child.updateExpanded();
       });
     },

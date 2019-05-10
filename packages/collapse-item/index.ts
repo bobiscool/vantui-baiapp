@@ -21,6 +21,7 @@ VantComponent({
     label: String,
     disabled: Boolean,
     clickable: Boolean,
+    titleClass: String,
     border: {
       type: Boolean,
       value: true

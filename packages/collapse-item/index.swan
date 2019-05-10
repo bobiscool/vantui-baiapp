@@ -3,16 +3,15 @@
 <view class="van-collapse-item custom-class {{ utils.judge(index !== 0 , 'van-hairline--top' , '') }}">
   <van-cell
     title="{{ title }}"
-    title-class="title-class"
+    titleClass="{{titleClass}}"
     icon="{{ icon }}"
     value="{{ value }}"
     label="{{ label }}"
     is-link="{{ isLink }}"
     clickable="{{ clickable }}"
     border="{{ border && expanded }}"
-    class="{{ utils.bem('collapse-item__title', { disabled, expanded }) }}"
     right-icon-class="van-cell__right-icon"
-    custom-class="van-cell"
+    custom-class="van-cell {{ utils.bem('collapse-item__title', { disabled, expanded }) }}"
     hover-class="van-cell--hover"
     bind:click="onClick"
   >

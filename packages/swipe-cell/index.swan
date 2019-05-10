@@ -1,9 +1,11 @@
+<filter src="../_filter/utils.filter.js" module="utils" />
+
 <view
   class="van-swipe-cell"
   data-key="cell"
   catchtap="onClick"
   bindtouchstart="startDrag"
-  catchtouchmove="{{ catchMove ? 'noop' : '' }}"
+  catchtouchmove="{{ utils.judge(catchMove , 'noop' , '') }}"
   capture-bind:touchmove="onDrag"
   catchtouchend="endDrag"
   catchtouchcancel="endDrag"
