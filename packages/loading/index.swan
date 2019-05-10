@@ -8,7 +8,7 @@
   >
     <view
       s-if="{{ type === 'spinner' }}"
-      s-for="item in 12"
+      s-for="[1,2,3,4,5,6,7,8,9,10,11,12]"
       s-key="index"
       class="van-loading__dot"
     />
