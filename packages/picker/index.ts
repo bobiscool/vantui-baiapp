@@ -111,7 +111,7 @@ VantComponent({
     // set column value by index
     setColumnValue(index: number, value: any) {
       const column = this.getColumn(index);
-
+      
       if (column == null) {
         return Promise.reject('setColumnValue: 对应列不存在');
       }
