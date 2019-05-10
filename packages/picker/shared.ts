@@ -17,5 +17,8 @@ export const pickerProps = {
   itemHeight: {
     type: Number,
     value: 44
-  }
+  },
+  activeClass: String,
+  toolbarClass: String,
+  columnClass: String
 };

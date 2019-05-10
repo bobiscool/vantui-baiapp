@@ -137,12 +137,12 @@ VantComponent({
 
     // get options of column by index
     getColumnValues(index: number) {
-      return (this.children[index] || {}).data.options;
+      return (this.getColumn(index) || {}).data.options;
     },
 
     // set options of column by index
     setColumnValues(index: number, options: any[], needReset = true) {
-      const column = this.children[index];
+      const column = this.getColumn(index);
 
       if (column == null) {
         return Promise.reject('setColumnValues: 对应列不存在');

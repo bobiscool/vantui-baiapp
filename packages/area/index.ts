@@ -7,8 +7,6 @@ type AreaItem = {
 };
 
 VantComponent({
-  classes: ['active-class', 'toolbar-class', 'column-class'],
-
   props: {
     ...pickerProps,
     value: String,
@@ -30,7 +28,8 @@ VantComponent({
   watch: {
     value(value: string) {
       this.code = value;
-      this.setValues();
+      console.log('value', value)
+      value && this.setValues();
     },
 
     areaList: 'setValues',
@@ -41,8 +40,16 @@ VantComponent({
       });
     }
   },
-
   mounted() {
+    let columnsNum = this.data.columnsNum;
+    console.log(columnsNum);
+    if (columnsNum) {
+      this.set({
+        displayColumns: this.data.columns.slice(0, +columnsNum)
+      });
+
+      console.log(this.data.displayColumns);
+    }
     setTimeout(() => {
       this.setValues();
     }, 50);
@@ -132,13 +139,13 @@ VantComponent({
 
     setValues() {
       const county = this.getConfig('county');
-      let code = this.code || Object.keys(county)[0] || '';
+      let code = this.code || (Object.keys(county)[0]) || '';
       const province = this.getList('province');
       const city = this.getList('city', code.slice(0, 2));
 
       const picker = this.getPicker();
-      console.log(picker);
-      if (!picker) {
+      console.log(province);
+      if (!picker || !Object.keys(province).length || !Object.keys(county).length) {
         return;
       }
 
