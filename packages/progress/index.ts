@@ -6,6 +6,7 @@ VantComponent({
     inactive: Boolean,
     percentage: Number,
     pivotText: String,
+    customClass: String,
     pivotColor: String,
     showPivot: {
       type: Boolean,
@@ -20,7 +21,9 @@ VantComponent({
       value: '#fff'
     }
   },
-
+  options: {
+    addGlobalClass: true
+  },
   data: {
     pivotWidth: 0,
     progressWidth: 0

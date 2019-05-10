@@ -5,22 +5,23 @@
     <view
       s-for="{{ steps }}"
       s-key="index"
-      class="{{ utils.bem('step', [direction, status(index, active)]) }} van-hairline"
+      class="{{ utils.bem('step', [direction, status.get(index, active)]) }} van-hairline"
     >
-      <view class="van-step__title" style="{{ index === active ? 'color: ' + activeColor : '' }}">
+      <view class="van-step__title" style="{{ utils.judge(index === active , 'color: ' + activeColor , '') }}">
         <view>{{ item.text }}</view>
         <view>{{ item.desc }}</view>
       </view>
       <view class="van-step__circle-container">
-        <view class="van-step__circle" s-if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+        <view class="van-step__circle" s-if="{{ index !== active }}" style="{{ utils.judge(index < active , 'background-color: ' + activeColor , '') }}" />
         <van-icon s-else name="checked" color="{{ activeColor }}" custom-class="van-step__active" />
       </view>
-      <view s-if="{{ index !== steps.length - 1 }}" class="van-step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+      <view s-if="{{ index !== steps.length - 1 }}" class="van-step__line" style="{{ utils.judge(index < active , 'background-color: ' + activeColor , '') }}" />
     </view>
   </view>
 </view>
 
 <filter module="status">
+
 function get(index, active) {
   if (index < active) {
     return 'finish';
@@ -31,5 +32,8 @@ function get(index, active) {
   return '';
 }
 
-module.exports = get;
+export default {
+  get: get
+};
+
 </filter>
