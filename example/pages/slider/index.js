@@ -6,10 +6,10 @@ Page({
   },
 
   onChange(event) {
-    swan.showToast({
-      icon: 'none',
-      title: `当前值：${event.detail}`
-    });
+    // swan.showToast({
+    //   icon: 'none',
+    //   title: `当前值：${event.detail}`
+    // });
   },
 
   onDrag(event) {

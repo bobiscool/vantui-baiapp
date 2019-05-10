@@ -13,6 +13,7 @@ export const touch = Behavior({
 
     touchMove(event: Weapp.TouchEvent) {
       const touch = event.touches[0];
+      console.log(touch);
       this.deltaX = touch.clientX - this.startX;
       this.deltaY = touch.clientY - this.startY;
       this.offsetX = Math.abs(this.deltaX);

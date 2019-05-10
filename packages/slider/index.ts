@@ -50,6 +50,7 @@ VantComponent({
     },
 
     onTouchMove(event: Weapp.TouchEvent) {
+      debugger;
       if (this.data.disabled) return;
 
       this.touchMove(event);

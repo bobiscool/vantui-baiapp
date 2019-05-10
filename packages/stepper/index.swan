@@ -8,9 +8,9 @@
     bind:tap="onMinus"
   />
   <input
-    type="{{ integer ? 'number' : 'digit' }}"
+    type="{{ utils.judge(integer , 'number' , 'digit') }}"
     class="input-class {{ utils.bem('stepper__input', { disabled: disabled || disableInput }) }}"
-    style="{{ inputWidth ? 'width: ' + inputWidth : '' }}"
+    style="{{ utils.judge(inputWidth , 'width: ' + inputWidth , '') }}"
     value="{{ value }}"
     focus="{{ focus }}"
     disabled="{{ disabled || disableInput }}"

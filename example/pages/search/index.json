@@ -16,6 +16,7 @@
     "van-row": "../../dist/row/index",
     "van-popup": "../../dist/popup/index",
     "van-rate": "../../dist/rate/index",
-    "van-search": "../../dist/search/index"
+    "van-search": "../../dist/search/index",
+    "van-slider": "../../dist/slider/index"
   }
 }

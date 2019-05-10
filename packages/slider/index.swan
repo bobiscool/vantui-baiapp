@@ -2,12 +2,12 @@
 
 <view
   class="custom-class {{ utils.bem('slider', { disabled }) }}"
-  style="{{ inactiveColor ? 'background:' + inactiveColor : '' }}"
+  style="{{ utils.judge(inactiveColor , 'background:' + inactiveColor , '') }}"
   bind:tap="onClick"
 >
   <view
     class="van-slider__bar"
-    style="{{ barStyle }}; {{ activeColor ? 'background:' + activeColor : '' }}"
+    style="{{ barStyle }}; {{ utils.judge(activeColor , 'background:' + activeColor , '') }}"
   >
     <view
       class="van-slider__button-wrapper"
