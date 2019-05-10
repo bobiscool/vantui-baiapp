@@ -5,7 +5,6 @@ const ITEM_HEIGHT = 44;
 VantComponent({
   classes: [
     'main-item-class',
-    'content-item-class',
     'main-active-class',
     'content-active-class',
     'main-disabled-class',
