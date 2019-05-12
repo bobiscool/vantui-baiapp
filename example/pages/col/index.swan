@@ -1,24 +1,26 @@
 <demo-block title="基础用法" padding>
-  <van-row>
-    <van-col span="8" custom-class="dark">span: 8</van-col>
-    <van-col span="8" custom-class="light">span: 8</van-col>
-    <van-col span="8" custom-class="dark">span: 8</van-col>
+  <van-row wid="1">
+    <van-col span="8" custom-class="dark" pid="1">span: 8</van-col>
+    <van-col span="8" custom-class="light" pid="1">span: 8</van-col>
+    <van-col span="8" custom-class="dark" pid="1">span: 8</van-col>
   </van-row>
 
-  <van-row>
-    <van-col span="4" custom-class="dark">span: 4</van-col>
-    <van-col span="10" offset="4" custom-class="light">offset: 4, span: 10</van-col>
+  <van-row wid="2">
+    <van-col span="4" custom-class="dark" pid="2">span: 4</van-col>
+    <van-col span="10" offset="4" custom-class="light" pid="2">offset: 4, span: 10</van-col>
   </van-row>
 
-  <van-row>
-    <van-col offset="12" span="12" custom-class="dark">offset: 12, span: 12</van-col>
+  <van-row wid="3">
+    <van-col offset="12" span="12" custom-class="dark" pid="3">offset: 12, span: 12</van-col>
   </van-row>
 </demo-block>
 
 <demo-block title="在列元素之间增加间距" padding>
-  <van-row gutter="20">
-    <van-col span="8" custom-class="dark">span: 8</van-col>
-    <van-col span="8" custom-class="light">span: 8</van-col>
-    <van-col span="8" custom-class="dark">span: 8</van-col>
+  <van-row gutter="20" wid="4">
+    <van-col span="8" custom-class="dark" pid="4">span: 8</van-col>
+    <van-col span="8" custom-class="light" pid="4">span: 8</van-col>
+    <van-col span="8" custom-class="dark" pid="4">span: 8</van-col>
   </van-row>
 </demo-block>
+
+<van-toast id="van-toast" />

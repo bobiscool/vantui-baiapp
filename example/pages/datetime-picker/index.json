@@ -20,6 +20,7 @@
     "van-transition": "../../dist/transition/index",
     "van-checkbox": "../../dist/checkbox/index",
     "van-checkbox-group": "../../dist/checkbox-group/index",
-    "van-datetime-picker": "../../dist/datetime-picker/index"
+    "van-datetime-picker": "../../dist/datetime-picker/index",
+    "van-toast": "../../dist/toast/index"
   }
 }

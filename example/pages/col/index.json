@@ -13,6 +13,7 @@
     "van-cell": "../../dist/cell/index",
     "van-cell-group": "../../dist/cell-group/index",
     "van-col": "../../dist/col/index",
-    "van-row": "../../dist/row/index"
+    "van-row": "../../dist/row/index",
+    "van-toast": "../../dist/toast/index"
   }
 }

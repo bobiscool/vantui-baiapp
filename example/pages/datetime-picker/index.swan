@@ -20,7 +20,7 @@
   />
 </demo-block>
 
-<!-- <demo-block title="选择日期（年月）">
+<demo-block title="选择日期（年月）">
   <van-datetime-picker
     type="year-month"
     data-type="year-month"
@@ -39,6 +39,6 @@
     max-hour="{{ maxHour }}"
     bind:input="onInput"
   />
-</demo-block> -->
+</demo-block>
 
 <van-toast id="van-toast" />

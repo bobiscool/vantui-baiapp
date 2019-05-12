@@ -3,7 +3,9 @@ import Toast from '../../dist/toast/toast';
 
 Page({
   data: {
-    column1: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
+    column1: {
+      '杭州':  ['杭州', '宁波', '温州', '嘉兴', '湖州']
+    },
     column2: [
       { text: '杭州', disabled: true },
       { text: '宁波' },

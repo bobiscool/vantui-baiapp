@@ -48,7 +48,6 @@ VantComponent({
   },
   mounted() {
     this.children = this.selectAllComponents('.column');
-
     if (Array.isArray(this.children) && this.children.length) {
           this.setColumns().catch(() => {});
     }
@@ -113,7 +112,9 @@ VantComponent({
       const column = this.getColumn(index);
       
       if (column == null) {
-        return Promise.reject('setColumnValue: 对应列不存在');
+        // 百度小程序watcher 先与 created
+        return false;
+        // return Promise.reject('setColumnValue: 对应列不存在');
       }
 
       return column.setValue(value);
@@ -129,7 +130,8 @@ VantComponent({
       const column = this.getColumn(columnIndex);
 
       if (column == null) {
-        return Promise.reject('setColumnIndex: 对应列不存在');
+        return false;
+        // return Promise.reject('setColumnIndex: 对应列不存在');
       }
 
       return column.setIndex(optionIndex);
@@ -145,7 +147,8 @@ VantComponent({
       const column = this.getColumn(index);
 
       if (column == null) {
-        return Promise.reject('setColumnValues: 对应列不存在');
+        return false;
+        // return Promise.reject('setColumnValues: 对应列不存在');
       }
 
       const isSame =

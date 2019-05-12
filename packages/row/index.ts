@@ -20,9 +20,12 @@ VantComponent({
   },
 
   mounted() {
-    if (this.data.gutter) {
-      this.setGutter();
-    }
+    this.setSlotChild().then(children => {
+      this.children = children || [];
+      if (this.data.gutter) {
+        this.setGutter();
+      }
+    });
   },
 
   methods: {
@@ -34,7 +37,7 @@ VantComponent({
         : '';
 
       this.set({ style });
-      this.getRelationNodes('../col/index').forEach(col => {
+      this.children && this.children.forEach(col => {
         col.setGutter(this.data.gutter);
       });
     }

@@ -122,5 +122,9 @@ export default {
   // switch 太恐怖 n目
   judgeSwitch(a, b, c, d, e, f) {
     return ((a ? b : c) ? 'background-color: ' + (d ? e : f) : '');
+  },
+  // picker 方法
+  isSimple(columns) {
+    return columns.length && !columns[0].values;
   }
 };
