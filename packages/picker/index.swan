@@ -1,6 +1,6 @@
 <filter src="../_filter/utils.filter.js" module="utils" />
 
-{{simple}}
+<!-- {{simple}} -->
 <view class="van-picker custom-class">
   <view
     s-if="{{ showToolbar }}"
@@ -50,10 +50,10 @@
         bind:change="onChange"
         />
 
-        1
+        
     </block>
     <block s-if="{{ !simple}}">
-      2
+      
         <picker-column
         class="van-picker__column"
         s-for="{{ columns }}"
