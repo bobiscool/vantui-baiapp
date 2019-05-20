@@ -1,3 +1,9 @@
+## 说明
+
+#### 有赞 百度小程序版本 基本改造完成,暂时picker还有点问题,抽空调一下,有些地方与文档有些差异,后面补一下...
+
+
+
 <p>
     <a href="https://github.com/youzan/"><img alt="logo" width="36px" src="https://img.yzcdn.cn/public_files/2017/02/09/e84aa8cbbf7852688c86218c1f3bbf17.png" alt="youzan">
     </a>
