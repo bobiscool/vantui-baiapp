@@ -48,6 +48,11 @@ VantComponent({
   },
   mounted() {
     this.children = this.selectAllComponents('.column');
+    let columns = this.data.columns;
+    this.setData({
+      simple: columns.length && !columns[0].values
+    });
+
     if (Array.isArray(this.children) && this.children.length) {
           this.setColumns().catch(() => {});
     }
@@ -80,6 +85,8 @@ VantComponent({
     },
 
     onChange(event: Weapp.Event) {
+      console.log('getColumnValue', this.getColumnValue(0))
+      console.log('simple', this.simple)
       if (this.simple) {
         this.$emit('change', {
           pickerId: this.nodeId,

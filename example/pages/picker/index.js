@@ -3,9 +3,7 @@ import Toast from '../../dist/toast/toast';
 
 Page({
   data: {
-    column1: {
-      '杭州':  ['杭州', '宁波', '温州', '嘉兴', '湖州']
-    },
+    column1: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
     column2: [
       { text: '杭州', disabled: true },
       { text: '宁波' },
@@ -30,6 +28,7 @@ Page({
 
   onChange1(event) {
     const { value, index } = event.detail;
+    console.log(event.detail);
     Toast(`Value: ${value}, Index：${index}`);
   },
 
@@ -43,8 +42,7 @@ Page({
   },
 
   onChange2(event) {
-    const { picker, value } = event.detail;
-    picker.setColumnValues(1, this.data.column3[value[0]]);
-    getApp().picker = picker;
+    const { value, index } = event.detail;
+    Toast(`Value: ${value}, Index：${index}`);
   }
 });

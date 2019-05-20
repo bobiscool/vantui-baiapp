@@ -22,6 +22,7 @@
     "van-checkbox-group": "../../dist/checkbox-group/index",
     "van-datetime-picker": "../../dist/datetime-picker/index",
     "van-field": "../../dist/field/index",
-    "van-picker": "../../dist/picker/index"
+    "van-picker": "../../dist/picker/index",
+    "van-toast": "../../dist/toast/index"
   }
 }

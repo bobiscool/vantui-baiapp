@@ -125,6 +125,7 @@ export default {
   },
   // picker 方法
   isSimple(columns) {
-    return columns.length && !columns[0].values;
+    return (!!columns.length && !columns[0].values);
+    // return columns.length && !columns[0].values;
   }
 };
