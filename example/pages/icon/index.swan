@@ -1,10 +1,4 @@
-<van-tabs
-  active="{{ active }}"
-  color="#1989fa"
-  bind:change="onSwitch"
-  wid="1"
->
-  <van-tab title="基础图标" custom-class="demo-tab-pane" pid="1">
+<demo-block title="基础图标">
     <van-col
       s-for="{{ icons.basic }}"
       s-key="index"
@@ -18,8 +12,8 @@
       />
       <view class="text">{{ item }}</view>
     </van-col>
-  </van-tab>
-  <van-tab title="线框风格" custom-class="demo-tab-pane" pid="1">
+</demo-block>
+<demo-block title="线框风格">
     <van-col
       s-for="{{ icons.outline }}"
       s-key="index"
@@ -33,8 +27,8 @@
       />
       <view class="text">{{ item }}</view>
     </van-col>
-  </van-tab>
-  <van-tab title="实底风格" custom-class="demo-tab-pane" pid="1">
+</demo-block>
+<demo-block title="实底风格">
     <van-col
       s-for="{{ icons.filled }}"
       s-key="index"
@@ -48,5 +42,4 @@
       />
       <view class="text">{{ item }}</view>
     </van-col>
-  </van-tab>
-</van-tabs>
+</demo-block> 

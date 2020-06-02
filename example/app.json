@@ -1,6 +1,6 @@
 {
-  "pages": [
-    "pages/dashboard/index",
+    "pages": [
+     "pages/dashboard/index",
     "pages/action-sheet/index",
     "pages/badge/index",
     "pages/button/index",
@@ -39,6 +39,16 @@
     "pages/rate/index",
     "pages/collapse/index",
     "pages/picker/index"
+<<<<<<< HEAD
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "智能小程序",
+        "backgroundTextStyle": "light"
+    }
+}
+=======
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
@@ -51,3 +61,4 @@
   },
   "sitemapLocation": "sitemap.json"
 }
+>>>>>>> 4584cd9b0fe41bb5db5138e177bc5ca689f4e0ab

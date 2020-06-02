@@ -1,0 +1,31 @@
+Arguments: 
+  D:\nodejs软件安装包\node.exe D:\yarn\bin\yarn.js add @vant/icons
+
+PATH: 
+  D:\FTP6\;D:\XShell\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;G:\git\Git\cmd;D:\nodejs软件安装包\;C:\ProgramData\chocolatey\bin;G:\mysql-8.0.11-winx64\bin;D:\yarn\bin\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;G:\mysql-8.0.11-winx64\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\新建文件夹\Microsoft VS Code\bin;D:\IntelliJ IDEA\IntelliJ IDEA 2019.3.3\bin;;C:\Users\Administrator\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: G:\vantui-baiapp-master\example\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at D:\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (D:\yarn\lib\cli.js:310:30)
+      at D:\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

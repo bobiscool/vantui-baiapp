@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+typings
+cache
+=======
 *.log*
 .cache
+>>>>>>> 4584cd9b0fe41bb5db5138e177bc5ca689f4e0ab
 .DS_Store
 .idea
 .vscode

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "@vant/doc": "^1.0.24",
+    "@vant/icons": "1.1.6",
+    "vant-icons": "^0.0.1"
+  }
+}
